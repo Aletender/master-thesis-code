@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-warning-icon',
-  imports: [],
-  templateUrl: './warning-icon.component.html',
   standalone: true,
-  styleUrl: './warning-icon.component.scss'
+  imports: [CommonModule, MatTooltipModule],
+  templateUrl: './warning-icon.component.html',
+  styleUrls: ['./warning-icon.component.scss']
 })
-export class WarningIconComponent {
-
-}
+export class WarningIconComponent {}

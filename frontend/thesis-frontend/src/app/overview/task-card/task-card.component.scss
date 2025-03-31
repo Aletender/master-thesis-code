@@ -2,8 +2,22 @@
 .header {
   display: flex;
   justify-content: space-between;
-  font-weight: bold;
+  align-items: center; // ← das ist der Trick!
+  margin-bottom: 0.5rem;
+
+  .left {
+    display: flex;
+    align-items: center; // ← auch hier wichtig!
+    gap: 0.4rem;
+  }
+
+  .id {
+    font-weight: 600;
+    font-family: monospace;
+    font-size: 1rem;
+  }
 }
+
 
 .warning {
   color: red;
@@ -17,8 +31,33 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
   transition: box-shadow 0.2s ease;
   margin: 0.7rem 0;
+  position: relative;
 
   &:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   }
+
+  .overdue-indicator {
+    position: absolute;
+    top: -1rem;
+    right: -1rem;
+    z-index: 2;
+    pointer-events: auto;
+  }
 }
+
+.qr-icon {
+  font-size: 1.2rem;
+  margin-right: 0.25rem;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.id {
+  font-weight: 600;
+  font-family: monospace;
+}
+

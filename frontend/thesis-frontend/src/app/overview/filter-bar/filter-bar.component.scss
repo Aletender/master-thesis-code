@@ -12,14 +12,37 @@
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  background-color: #e2e3e5;
-  color: #383d41;
+  background-color: #f0f0f0;
+  color: #333;
   transition: all 0.2s ease;
 }
 
-.chip.selected {
-  outline: 2px solid #00000033;
-  box-shadow: 0 0 0 2px #00000022;
+.chip:hover {
+  opacity: 0.9;
 }
 
-/* Optional: Reuse deine .status-... Klassen für Farben */
+/* Status-Farben bei aktiver Auswahl */
+.status-yellow {
+  background-color: #ffe699;
+  color: #5c4400;
+}
+
+.status-blue {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-green {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-red {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-gray {
+  background-color: #e2e3e5;
+  color: #383d41;
+}

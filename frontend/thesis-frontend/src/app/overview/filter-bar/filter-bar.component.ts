@@ -47,4 +47,12 @@ export class FilterBarComponent {
   getColorClass(status: TaskStatus): string {
     return TASK_STATUS_META[status]?.colorClass ?? 'status-gray';
   }
+
+  getButtonClass(status: TaskStatus): string[] {
+    const classes = ['chip'];
+    if (this.isSelected(status)) {
+      classes.push(this.getColorClass(status));
+    }
+    return classes;
+  }
 }

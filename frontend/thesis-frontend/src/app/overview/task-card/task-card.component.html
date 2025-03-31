@@ -1,8 +1,22 @@
 <div class="task-card">
+  <app-warning-icon
+    *ngIf="task.hasWarning"
+    class="overdue-indicator"
+    title="Overdue">
+  </app-warning-icon>
+
   <div class="header">
-    <span class="id">{{ task.id }}</span>
+    <div class="left">
+      <app-qr-code
+        [data]="task.id"
+        (click)="showQr()">
+      </app-qr-code>
+
+      <span class="id">{{ task.id }}</span>
+    </div>
     <app-status-badge [status]="task.status"></app-status-badge>
   </div>
+  <hr class="divider" />
 
   <div class="customer">
     {{ task.customerName }}
@@ -12,7 +26,9 @@
     {{ task.startDate }} – {{ task.endDate }}
   </div>
 
-  <div *ngIf="task.hasWarning" class="warning">
-    ⚠️ Overdue
-  </div>
+  <app-task-actions
+    [taskId]="task.id"
+    (viewDetails)="onViewDetails($event)"
+    (editTask)="onEditTask($event)">
+  </app-task-actions>
 </div>

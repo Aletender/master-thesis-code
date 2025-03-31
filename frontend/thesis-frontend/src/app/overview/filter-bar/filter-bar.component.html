@@ -1,8 +1,7 @@
 <div class="filter-bar">
   <button
     *ngFor="let status of allStatuses"
-    class="chip"
-    [ngClass]="getColorClass(status) + (isSelected(status) ? ' selected' : '')"
+    [ngClass]="getButtonClass(status)"
     (click)="toggleStatus(status)">
     {{ getLabel(status) }}
   </button>
