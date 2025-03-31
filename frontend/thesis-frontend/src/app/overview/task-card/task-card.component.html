@@ -1,0 +1,18 @@
+<div class="task-card">
+  <div class="header">
+    <span class="id">{{ task.id }}</span>
+    <app-status-badge [status]="task.status"></app-status-badge>
+  </div>
+
+  <div class="customer">
+    {{ task.customerName }}
+  </div>
+
+  <div class="dates">
+    {{ task.startDate }} – {{ task.endDate }}
+  </div>
+
+  <div *ngIf="task.hasWarning" class="warning">
+    ⚠️ Overdue
+  </div>
+</div>

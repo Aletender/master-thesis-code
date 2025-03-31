@@ -1,0 +1,35 @@
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Farben laut deiner State Machine */
+.status-yellow {
+  background-color: #ffe699;
+  color: #5c4400;
+}
+
+.status-blue {
+  background-color: #cce5ff;
+  color: #004085;
+}
+
+.status-green {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-red {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.status-gray {
+  background-color: #e2e3e5;
+  color: #383d41;
+}
