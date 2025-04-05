@@ -1,0 +1,11 @@
+<div class="pickup-view">
+  <h2>Pickup View</h2>
+  <ul>
+    <li *ngFor="let step of checklist">
+      <span>{{ step.label }}</span>
+      <button (click)="openBottomSheet(step.helpText)">
+        <mat-icon>help_outline</mat-icon>
+      </button>
+    </li>
+  </ul>
+</div>

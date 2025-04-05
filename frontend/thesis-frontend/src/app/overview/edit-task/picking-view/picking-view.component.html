@@ -1,0 +1,24 @@
+<div class="picking-view" *ngIf="task">
+  <h2>Picking Order: <span class="task-id">{{ task.taskId }}</span></h2>
+
+  <!-- Kundendaten -->
+  <div class="customer-info">
+    <p><strong>Kundenname:</strong> {{ task.customerName }}</p>
+    <p><strong>Startdatum:</strong> {{ task.startDate }}</p>
+    <p><strong>Enddatum:</strong> {{ task.endDate }}</p>
+  </div>
+
+  <!-- Dynamische Liste von Items -->
+  <div class="items-list">
+    <h3>Items</h3>
+    <ul>
+      <li *ngFor="let item of items">{{ item.name }} - {{ item.quantity }}</li>
+    </ul>
+  </div>
+
+  <!-- Buttons -->
+  <div class="actions">
+    <button (click)="goBack()">Zurück zur Übersicht</button>
+    <button class="edit" (click)="markAsPicked()">Als gepickt markieren</button>
+  </div>
+</div>

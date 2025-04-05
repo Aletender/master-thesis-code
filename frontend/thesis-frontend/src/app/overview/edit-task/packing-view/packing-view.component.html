@@ -1,0 +1,24 @@
+<div class="packing-view" *ngIf="task">
+  <h2>Packing View</h2>
+  <form (ngSubmit)="save()">
+    <div>
+      <label for="customerName">Kundenname:</label>
+      <input id="customerName" [(ngModel)]="task.customerName" name="customerName" required />
+    </div>
+    <div>
+      <label for="startDate">Startdatum:</label>
+      <input id="startDate" [(ngModel)]="task.startDate" name="startDate" type="date" required />
+    </div>
+    <div>
+      <label for="endDate">Enddatum:</label>
+      <input id="endDate" [(ngModel)]="task.endDate" name="endDate" type="date" required />
+    </div>
+    <button type="submit">Speichern</button>
+  </form>
+
+  <!-- Buttons -->
+  <div class="actions">
+    <button (click)="goBack()">Zurück zur Übersicht</button>
+    <button class="edit" (click)="markAsPacked()">Als verpackt markieren</button>
+  </div>
+</div>

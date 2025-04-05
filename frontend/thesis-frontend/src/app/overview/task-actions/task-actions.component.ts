@@ -44,6 +44,21 @@ export class TaskActionsComponent {
       return;
     }
 
+    if (this.taskStatus === TaskStatus.PACKED) {
+      const dialogRef = this.dialog.open(ConfirmDialogComponent, {
+        data: { action: 'Bereit zur Abholung' }
+      });
+
+      dialogRef.afterClosed().subscribe(result => {
+        if (result) {
+          this.taskService.updateTask(this.taskId, { status: TaskStatus.R4_PICKUP }).subscribe(() => {
+            this.taskStatus = TaskStatus.R4_PICKUP;
+          });
+        }
+      });
+      return;
+    }
+
     const dialogRef = this.dialog.open(ConfirmDialogComponent, {
       data: { action: this.taskStatus === TaskStatus.READY4PICKING ? 'Picken' : 'Packing' }
     });

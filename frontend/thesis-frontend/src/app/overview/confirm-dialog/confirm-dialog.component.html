@@ -1,0 +1,7 @@
+<!-- file: frontend/thesis-frontend/src/app/overview/confirm-dialog/confirm-dialog.component.html -->
+<h2 mat-dialog-title>Bestätigung</h2>
+<mat-dialog-content>Wirklich {{ data.action }} starten?</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCancel()">Abbrechen</button>
+  <button mat-button (click)="onConfirm()">Bestätigen</button>
+</mat-dialog-actions>
