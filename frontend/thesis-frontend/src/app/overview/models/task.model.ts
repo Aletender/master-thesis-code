@@ -1,5 +1,6 @@
 export interface Task {
   id: string;
+  taskId: string; // Add this line
   customerName: string;
   startDate: string;
   endDate: string;
@@ -8,18 +9,18 @@ export interface Task {
 }
 
 export enum TaskStatus {
-  READY4PICKUP = 'READY4PICKUP',
+  READY4PICKING= 'READY4PICKING',
   IN_PICKING = 'IN_PICKING',
   PICKED = 'PICKED',
   IN_PACKING = 'IN_PACKING',
   PACKED = 'PACKED',
-  R4_PICKUP = 'R4_PICKUP',
+  R4_PICKUP = 'READY4PICKUP',
   PICKED_UP = 'PICKED_UP',
   CANCELED = 'CANCELED'
 }
 
 export const TASK_STATUS_META: Record<TaskStatus, { label: string; colorClass: string }> = {
-  [TaskStatus.READY4PICKUP]: { label: 'Ready 4 Picking', colorClass: 'status-yellow' },
+  [TaskStatus.READY4PICKING]: { label: 'Ready 4 Picking', colorClass: 'status-yellow' },
   [TaskStatus.IN_PICKING]: { label: 'In Picking', colorClass: 'status-yellow' },
   [TaskStatus.PICKED]: { label: 'Picked', colorClass: 'status-yellow' },
   [TaskStatus.IN_PACKING]: { label: 'In Packing', colorClass: 'status-blue' },

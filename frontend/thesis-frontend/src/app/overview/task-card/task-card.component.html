@@ -8,11 +8,11 @@
   <div class="header">
     <div class="left">
       <app-qr-code
-        [data]="task.id"
+        [data]="task.taskId"
         (click)="showQr()">
       </app-qr-code>
 
-      <span class="id">{{ task.id }}</span>
+      <span class="id">{{ task.taskId }}</span>
     </div>
     <app-status-badge [status]="task.status"></app-status-badge>
   </div>
@@ -27,7 +27,8 @@
   </div>
 
   <app-task-actions
-    [taskId]="task.id"
+    [taskId]="task.taskId"
+    [taskStatus]="task.status"
     (viewDetails)="onViewDetails($event)"
     (editTask)="onEditTask($event)">
   </app-task-actions>

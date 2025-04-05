@@ -13,7 +13,7 @@ export class FilterBarComponent {
   @Output() statusFilterChange = new EventEmitter<TaskStatus[]>();
 
   allStatuses: TaskStatus[] = [
-    TaskStatus.READY4PICKUP,
+    TaskStatus.READY4PICKING,
     TaskStatus.IN_PICKING,
     TaskStatus.PICKED,
     TaskStatus.IN_PACKING,
