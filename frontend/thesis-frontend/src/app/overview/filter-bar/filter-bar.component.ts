@@ -1,17 +1,19 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskStatus, TASK_STATUS_META } from '../models/task.model';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-filter-bar',
   standalone: true,
-  imports: [CommonModule, MatChipsModule],
+  imports: [CommonModule, MatChipsModule, FormsModule],
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.scss']
 })
 export class FilterBarComponent {
   @Output() statusFilterChange = new EventEmitter<TaskStatus[]>();
+  @Output() textFilterChange = new EventEmitter<string>();
 
   allStatuses: TaskStatus[] = [
     TaskStatus.READY4PICKING,
@@ -24,8 +26,8 @@ export class FilterBarComponent {
     TaskStatus.CANCELED
   ];
 
-
   selectedStatuses = new Set<TaskStatus>();
+  searchText: string = '';
 
   toggleStatus(status: TaskStatus): void {
     if (this.selectedStatuses.has(status)) {
@@ -49,11 +51,7 @@ export class FilterBarComponent {
     return TASK_STATUS_META[status]?.colorClass ?? 'status-gray';
   }
 
-  getButtonClass(status: TaskStatus): string[] {
-    const classes = ['chip'];
-    if (this.isSelected(status)) {
-      classes.push(this.getColorClass(status));
-    }
-    return classes;
+  onSearchTextChange(): void {
+    this.textFilterChange.emit(this.searchText.trim().toLowerCase());
   }
 }

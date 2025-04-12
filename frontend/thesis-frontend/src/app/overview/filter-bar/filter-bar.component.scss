@@ -1,20 +1,43 @@
 .filter-bar-container {
-  display: flex; /* Flexbox für das Container-Layout */
-  justify-content: center; /* Zentriert die gesamte Filter-Bar horizontal */
-  align-items: center; /* Zentriert die gesamte Filter-Bar vertikal */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Abstand zwischen Chips und Suchleiste */
   background-color: #fff;
   border-radius: 8px;
   padding: 1rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1rem;
 }
 
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Zentriert die Chips horizontal */
-  align-items: center; /* Zentriert die Chips vertikal */
-  gap: 0.1rem; /* Abstand zwischen den Chips */
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.search-input {
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  margin: 0 auto; /* Zentriert das Eingabefeld */
+}
+
+.search-container {
+  width: 100%;
+  max-width: 300px;
+}
+
+.search-input {
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
 }
 
 mat-chip {
@@ -64,4 +87,15 @@ mat-chip {
     font-size: 0.75rem; /* Kleinere Schriftgröße für Mobilgeräte */
     padding: 0.2rem 0.1rem; /* Kompakteres Design */
   }
+}
+
+.search-input {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  box-sizing: border-box;
 }

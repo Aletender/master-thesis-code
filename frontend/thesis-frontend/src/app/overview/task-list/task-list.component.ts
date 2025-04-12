@@ -6,6 +6,7 @@ import { TaskService } from '../services/task.service';
 import { WebsocketService } from '../services/websocket.service';
 import { Subscription } from 'rxjs';
 import { trigger, transition, style, animate, AnimationEvent } from '@angular/animations';
+import { FilterBarComponent } from '../filter-bar/filter-bar.component';
 
 @Component({
   selector: 'app-task-list',
@@ -13,7 +14,8 @@ import { trigger, transition, style, animate, AnimationEvent } from '@angular/an
   standalone: true,
   imports: [
     TaskCardComponent,
-    CommonModule
+    CommonModule,
+    FilterBarComponent
   ],
   styleUrls: ['./task-list.component.scss'],
   animations: [
@@ -32,7 +34,9 @@ import { trigger, transition, style, animate, AnimationEvent } from '@angular/an
 export class TaskListComponent implements OnInit, OnDestroy {
   @Input() statuses: TaskStatus[] = [];
   tasks: Task[] = [];
+  filteredTasks: Task[] = [];
   private subscriptions: Subscription = new Subscription();
+  private searchText: string = '';
 
   constructor(
     private taskService: TaskService,
@@ -46,14 +50,16 @@ export class TaskListComponent implements OnInit, OnDestroy {
       this.websocketService.onTaskUpdate().subscribe((updatedTask: Task) => {
         const index = this.tasks.findIndex(task => task.taskId === updatedTask.taskId);
         if (index !== -1) {
-          this.tasks[index] = updatedTask; // Aktualisiere die bestehende Aufgabe
+          this.tasks[index] = updatedTask;
         }
+        this.applyFilters();
       })
     );
 
     this.subscriptions.add(
       this.websocketService.onTaskListUpdate().subscribe((updatedTasks: Task[]) => {
-        this.tasks = updatedTasks.map(task => ({ ...task, isNew: false })); // Reset
+        this.tasks = updatedTasks.map(task => ({ ...task, isNew: false }));
+        this.applyFilters();
       })
     );
   }
@@ -64,18 +70,33 @@ export class TaskListComponent implements OnInit, OnDestroy {
 
   loadTasks(): void {
     this.taskService.getTasks().subscribe(tasks => {
-      console.log('Geladene Aufgaben:', tasks); // Debug-Ausgabe
       this.tasks = tasks;
+      this.applyFilters();
     });
   }
 
-  get filteredTasks(): Task[] {
-    if (this.statuses.length === 0) return this.tasks;
-    return this.tasks.filter(task => this.statuses.includes(task.status));
+  onStatusFilterChange(statuses: TaskStatus[]): void {
+    this.statuses = statuses;
+    this.applyFilters();
+  }
+
+  onTextFilterChange(searchText: string): void {
+    this.searchText = searchText;
+    this.applyFilters();
+  }
+
+  applyFilters(): void {
+    this.filteredTasks = this.tasks.filter(task => {
+      const matchesStatus = this.statuses.length === 0 || this.statuses.includes(task.status);
+      const matchesText = !this.searchText ||
+        task.taskId.toLowerCase().includes(this.searchText) ||
+        task.customerName.toLowerCase().includes(this.searchText);
+      return matchesStatus && matchesText;
+    });
   }
 
   trackByTaskId(index: number, task: Task): string {
-    return task.taskId; // Eindeutige ID des Tasks
+    return task.taskId;
   }
 
   onAnimationDone(event: AnimationEvent, task: Task): void {

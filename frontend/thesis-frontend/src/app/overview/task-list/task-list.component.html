@@ -1,8 +1,9 @@
 <div class="task-list-container">
   <h1>Aufgaben</h1>
-  <div class="filters">
-    <!-- Filter-Elemente hier hinzufügen -->
-  </div>
+  <app-filter-bar
+    (statusFilterChange)="onStatusFilterChange($event)"
+    (textFilterChange)="onTextFilterChange($event)">
+  </app-filter-bar>
   <div class="task-list">
     <app-task-card
       *ngFor="let task of filteredTasks; trackBy: trackByTaskId"

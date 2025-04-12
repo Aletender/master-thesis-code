@@ -10,4 +10,12 @@
       </mat-chip>
     </mat-chip-set>
   </div>
+
+  <!-- Fuzzy-Textsuche -->
+  <input
+    type="text"
+    class="search-input full-width"
+    placeholder="Suche nach Kunde oder Task-ID"
+    [(ngModel)]="searchText"
+    (input)="onSearchTextChange()" />
 </div>
