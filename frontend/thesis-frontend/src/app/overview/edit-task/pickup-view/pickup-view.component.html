@@ -1,11 +1,20 @@
 <div class="pickup-view">
-  <h2>Pickup View</h2>
-  <ul>
-    <li *ngFor="let step of checklist">
-      <span>{{ step.label }}</span>
-      <button (click)="openBottomSheet(step.helpText)">
-        <mat-icon>help_outline</mat-icon>
+  <h2>Pickup Checklist</h2>
+  <div class="checklist">
+    <div *ngFor="let step of checklist; let i = index" class="checklist-card" [ngClass]="{ 'pulsing-action': step.action }">
+      <div class="number">{{ i + 1 }}</div>
+      <div class="description">{{ step.label }}</div>
+      <button mat-icon-button class="info-button" *ngIf="step.helpText" (click)="openBottomSheet(step.helpText)">
+        <mat-icon>info</mat-icon>
       </button>
-    </li>
-  </ul>
+      <button mat-icon-button class="ai-button" *ngIf="step.action" (click)="step.action()">
+        <mat-icon>smart_toy</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button mat-raised-button color="warn" (click)="cancel()">Abbrechen</button>
+    <button mat-raised-button color="accent" (click)="complete()">Fertig</button>
+  </div>
 </div>

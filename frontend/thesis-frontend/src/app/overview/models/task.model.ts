@@ -1,11 +1,12 @@
 export interface Task {
-  id: string;
-  taskId: string; // Add this line
+  taskId: string;
   customerName: string;
   startDate: string;
   endDate: string;
   status: TaskStatus;
   hasWarning?: boolean;
+  isNew?: boolean; // Neu hinzugefügt
+  isDeleted?: boolean; // Neu hinzugefügt
 }
 
 export enum TaskStatus {

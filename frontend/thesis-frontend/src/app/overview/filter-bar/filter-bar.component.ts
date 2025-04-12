@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TaskStatus, TASK_STATUS_META } from '../models/task.model';
+import {MatChipsModule} from '@angular/material/chips';
 
 @Component({
   selector: 'app-filter-bar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatChipsModule],
   templateUrl: './filter-bar.component.html',
   styleUrls: ['./filter-bar.component.scss']
 })

@@ -31,6 +31,6 @@ export class TaskCardComponent {
   }
 
   showQr(): void {
-    console.log('Show QR for:', this.task.id);
+    console.log('Show QR for:', this.task.taskId);
   }
 }

@@ -1,8 +1,13 @@
-<div class="filter-bar">
-  <button
-    *ngFor="let status of allStatuses"
-    [ngClass]="getButtonClass(status)"
-    (click)="toggleStatus(status)">
-    {{ getLabel(status) }}
-  </button>
+<div class="filter-bar-container">
+  <div class="filter-bar">
+    <mat-chip-set>
+      <mat-chip
+        *ngFor="let status of allStatuses"
+        [ngClass]="{ 'selected-chip': isSelected(status) }"
+        [class]="isSelected(status) ? getColorClass(status) : ''"
+        (click)="toggleStatus(status)">
+        {{ getLabel(status) }}
+      </mat-chip>
+    </mat-chip-set>
+  </div>
 </div>

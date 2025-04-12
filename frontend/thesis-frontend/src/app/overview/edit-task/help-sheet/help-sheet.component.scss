@@ -1,0 +1,24 @@
+.help-sheet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  .markdown-content {
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+  }
+
+  .close-button {
+    align-self: center;
+  }
+}

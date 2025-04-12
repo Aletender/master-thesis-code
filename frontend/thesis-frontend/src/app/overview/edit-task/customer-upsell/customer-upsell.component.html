@@ -1,0 +1,58 @@
+<div class="upsell-content">
+  <h2 class="customer-name">
+    {{ customerName }} ({{ customerAge }})
+    <mat-icon *ngIf="customerGender === 'male'">male</mat-icon>
+    <mat-icon *ngIf="customerGender === 'female'">female</mat-icon>
+  </h2>
+
+  <div class="pet-info">
+    <div *ngIf="!showAllPets">
+      <div class="info-row">
+        <span class="fact-text">
+          ({{ pets[0].type }}) {{ pets[0].breed }} {{ pets[0].name }} ({{ pets[0].age }})
+        </span>
+        <mat-icon *ngIf="pets[0].gender === 'male'">male</mat-icon>
+        <mat-icon *ngIf="pets[0].gender === 'female'">female</mat-icon>
+      </div>
+    </div>
+
+    <div *ngIf="showAllPets">
+      <div class="info-row" *ngFor="let pet of pets">
+        <span class="fact-text">
+          ({{ pet.type }}) {{ pet.breed }} {{ pet.name }} ({{ pet.age }})
+        </span>
+        <mat-icon *ngIf="pet.gender === 'male'">male</mat-icon>
+        <mat-icon *ngIf="pet.gender === 'female'">female</mat-icon>
+      </div>
+    </div>
+
+    <!-- Button unter der Liste -->
+    <button mat-button class="inline-toggle-button" (click)="toggleShowAllPets()">
+      {{ showAllPets ? 'Weniger anzeigen' : '+' + (pets.length - 1) + ' weitere anzeigen' }}
+    </button>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <h3>
+    <mat-icon>shopping_cart</mat-icon> Empfohlene Produkte
+  </h3>
+  <ul>
+    <li *ngFor="let product of products | slice:0:2" class="product-item">
+      <app-product-card
+        [name]="product.name"
+        [price]="product.price"
+        [imageUrl]="product.imageUrl">
+      </app-product-card>
+      <div class="product-hints" *ngIf="product.hints?.length">
+        <mat-chip-listbox class="mat-mdc-chip-set">
+          <mat-chip *ngFor="let hint of product.hints | slice:0:3">
+            <p class="ki-text">{{ hint }}</p>
+          </mat-chip>
+        </mat-chip-listbox>
+      </div>
+    </li>
+  </ul>
+
+  <button mat-raised-button color="primary" (click)="close()">Schließen</button>
+</div>

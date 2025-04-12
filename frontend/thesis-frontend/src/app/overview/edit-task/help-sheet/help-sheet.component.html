@@ -1,7 +1,7 @@
-<!-- file: frontend/thesis-frontend/src/app/overview/edit-task/help-sheet/help-sheet.component.html -->
 <div class="help-sheet">
-  <button mat-icon-button (click)="close()">
-    <mat-icon>close</mat-icon>
-  </button>
-  <p>{{ data.helpText }}</p>
+  <h2 class="title">{{ data.step }}</h2>
+  <div class="markdown-content">
+    <markdown [data]="data.helpText"></markdown>
+  </div>
+  <button mat-raised-button color="primary" class="close-button" (click)="close()">Schließen</button>
 </div>

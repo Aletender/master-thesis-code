@@ -1,6 +1,15 @@
-<div class="task-list">
-  <app-task-card
-    *ngFor="let task of filteredTasks"
-    [task]="task">
-  </app-task-card>
+<div class="task-list-container">
+  <h1>Aufgaben</h1>
+  <div class="filters">
+    <!-- Filter-Elemente hier hinzufügen -->
+  </div>
+  <div class="task-list">
+    <app-task-card
+      *ngFor="let task of filteredTasks; trackBy: trackByTaskId"
+      [task]="task"
+      @taskAnimation
+      [attr.data-task-id]="task.taskId"
+      [ngClass]="{ 'highlight-green': task.isNew, 'highlight-red': task.isDeleted }">
+    </app-task-card>
+  </div>
 </div>

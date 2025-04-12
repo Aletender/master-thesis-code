@@ -9,5 +9,6 @@ export const routes: Routes = [
   { path: 'edit/picking/:id', component: PickingViewComponent },
   { path: 'edit/packing/:id', component: PackingViewComponent },
   { path: 'edit/pickup/:id', component: PickupViewComponent },
+  { path: '**', redirectTo: '' }
   // Weitere Routen hier hinzufügen
 ];

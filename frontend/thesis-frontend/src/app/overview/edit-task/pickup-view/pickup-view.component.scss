@@ -1,0 +1,100 @@
+.pickup-view {
+  padding: 1rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  .checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .checklist-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 2.1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.2s ease, background-color 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .number {
+      font-weight: bold;
+      font-size: 1.5rem;
+      margin-right: 1rem;
+    }
+
+    .description {
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      min-height: 40px;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+
+  button {
+    min-width: 120px;
+  }
+}
+
+.checklist-card button {
+  width: 56px; /* Breitere Schaltfläche */
+  height: 56px; /* Höhere Schaltfläche */
+  font-size: 24px; /* Größeres Icon */
+}
+
+.info-button {
+  background-color: #2196f3; /* Material Blue 500 */
+  color: #fff;
+
+  &:hover {
+    background-color: #1976d2; /* Material Blue 700 */
+  }
+}
+
+.ai-button {
+  background-color: #9c27b0; /* Material Purple 500 */
+  color: #fff;
+
+  &:hover {
+    background-color: #7b1fa2; /* Material Purple 700 */
+  }
+}
+
+@keyframes pulse {
+  100% {
+    background-color: #e1bee7; /* Helles Lila */
+    box-shadow: 0 0 10px rgba(225, 190, 231, 0.5);
+  }
+  50% {
+    background-color: #9c27b0; /* Lila */
+    box-shadow: 0 0 20px rgba(156, 39, 176, 0.7);
+  }
+  0% {
+    background-color: #e1bee7; /* Zurück zu hellem Lila */
+    box-shadow: 0 0 10px rgba(225, 190, 231, 0.5);
+  }
+}
+
+.pulsing-action button {
+  animation: pulse 2s infinite; /* Pulsieren alle 2 Sekunden */
+  border-radius: 50%; /* Runde Form für den Button */
+}

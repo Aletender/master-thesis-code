@@ -1,48 +1,67 @@
-.filter-bar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.filter-bar-container {
+  display: flex; /* Flexbox für das Container-Layout */
+  justify-content: center; /* Zentriert die gesamte Filter-Bar horizontal */
+  align-items: center; /* Zentriert die gesamte Filter-Bar vertikal */
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 1rem;
 }
 
-.chip {
-  border: none;
-  border-radius: 16px;
-  padding: 0.25rem 0.75rem;
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Zentriert die Chips horizontal */
+  align-items: center; /* Zentriert die Chips vertikal */
+  gap: 0.1rem; /* Abstand zwischen den Chips */
+}
+
+mat-chip {
   font-size: 0.85rem;
   font-weight: 500;
   cursor: pointer;
-  background-color: #f0f0f0;
-  color: #333;
   transition: all 0.2s ease;
+  padding: 0.3rem 0.001rem; /* Reduziertes Innenabstand */
+
+  &.status-yellow {
+    background-color: #ffe699;
+    color: #5c4400;
+  }
+
+  &.status-blue {
+    background-color: #cce5ff;
+    color: #004085;
+  }
+
+  &.status-green {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  &.status-red {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+
+  &.status-gray {
+    background-color: #e2e3e5;
+    color: #383d41;
+  }
 }
 
-.chip:hover {
-  opacity: 0.9;
+.selected-chip {
+  border: 2px solid #000; /* Schwarzer Rand für ausgewählte Chips */
+  font-weight: bold;
 }
 
-/* Status-Farben bei aktiver Auswahl */
-.status-yellow {
-  background-color: #ffe699;
-  color: #5c4400;
-}
+@media (max-width: 600px) {
+  .filter-bar {
+    gap: 0.1rem; /* Engerer Abstand für kleinere Bildschirme */
+  }
 
-.status-blue {
-  background-color: #cce5ff;
-  color: #004085;
-}
-
-.status-green {
-  background-color: #d4edda;
-  color: #155724;
-}
-
-.status-red {
-  background-color: #f8d7da;
-  color: #721c24;
-}
-
-.status-gray {
-  background-color: #e2e3e5;
-  color: #383d41;
+  mat-chip {
+    font-size: 0.75rem; /* Kleinere Schriftgröße für Mobilgeräte */
+    padding: 0.2rem 0.1rem; /* Kompakteres Design */
+  }
 }
