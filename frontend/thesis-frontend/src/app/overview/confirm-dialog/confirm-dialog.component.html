@@ -2,6 +2,6 @@
 <h2 mat-dialog-title>Bestätigung</h2>
 <mat-dialog-content>Wirklich {{ data.action }} starten?</mat-dialog-content>
 <mat-dialog-actions>
-  <button mat-button (click)="onCancel()">Abbrechen</button>
-  <button mat-button (click)="onConfirm()">Bestätigen</button>
+  <button mat-raised-button (click)="onCancel()">Abbrechen</button>
+  <button mat-flat-button (click)="onConfirm()">Bestätigen</button>
 </mat-dialog-actions>

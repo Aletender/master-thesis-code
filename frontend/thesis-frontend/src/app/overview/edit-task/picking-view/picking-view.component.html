@@ -1,24 +1,65 @@
-<div class="picking-view" *ngIf="task">
-  <h2>Picking Order: <span class="task-id">{{ task.taskId }}</span></h2>
-
-  <!-- Kundendaten -->
-  <div class="customer-info">
-    <p><strong>Kundenname:</strong> {{ task.customerName }}</p>
-    <p><strong>Startdatum:</strong> {{ task.startDate }}</p>
-    <p><strong>Enddatum:</strong> {{ task.endDate }}</p>
+<mat-card class="picking-header-card" appearance="outlined">
+  <div class="picking-header">
+    <div>
+      <h2>Picking Order: <span class="task-id">{{ task.taskId }}</span></h2>
+      <div class="customer-info">
+        <span><mat-icon inline>person</mat-icon> {{ task.customerName }}</span>
+        <span><mat-icon inline>event</mat-icon> {{ task.startDate }} – {{ task.endDate }}</span>
+      </div>
+    </div>
   </div>
+</mat-card>
 
-  <!-- Dynamische Liste von Items -->
-  <div class="items-list">
-    <h3>Items</h3>
-    <ul>
-      <li *ngFor="let item of items">{{ item.name }} - {{ item.quantity }}</li>
-    </ul>
-  </div>
+<div class="items-list">
+  <h2>Produkte</h2>
+  <ng-container *ngIf="!loadingProducts; else loadingTpl">
+    <ng-container *ngIf="products.length > 0; else noProductsTpl">
+      <app-product-card
+        *ngFor="let product of products"
+        [name]="product.name"
+        [description]="product.description"
+        [price]="product.price"
+        [sku]="product.sku"
+        [category]="product.category"
+        [brand]="product.brand"
+        [stockQuantity]="product.stockQuantity"
+        [shelfLocation]="product.shelfLocation"
+        [isColdStorage]="product.isColdStorage"
+        [targetAnimal]="product.targetAnimal"
+        [recommendedAgeGroup]="product.recommendedAgeGroup"
+        [weightGrams]="product.weightGrams"
+        [packSize]="product.packSize"
+        [imageUrl]="product.imageUrl"
+        [quantity]="1"
+      >
+        <mat-checkbox
+          mat-card-avatar
+          class="picking-checkbox"
+          [checked]="isPicked(product.sku)"
+          (change)="togglePicked(product.sku)"
+          color="primary"
+          slot="checkbox"
+          style="margin-right: 1rem;"
+        ></mat-checkbox>
+      </app-product-card>
+    </ng-container>
+    <ng-template #noProductsTpl>
+      <p>Keine Produkte gefunden.</p>
+    </ng-template>
+  </ng-container>
+  <ng-template #loadingTpl>
+    <p>Produkte werden geladen...</p>
+  </ng-template>
+</div>
 
-  <!-- Buttons -->
-  <div class="actions">
-    <button (click)="goBack()">Zurück zur Übersicht</button>
-    <button class="edit" (click)="markAsPicked()">Als gepickt markieren</button>
-  </div>
+<div class="actions">
+  <button mat-raised-button (click)="goBack()">Zurück zur Übersicht</button>
+  <button
+    mat-flat-button
+    color="accent"
+    (click)="markAsPicked()"
+    [disabled]="!allPicked"
+  >
+    Als gepickt markieren
+  </button>
 </div>

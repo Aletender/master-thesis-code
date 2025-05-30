@@ -1,37 +1,56 @@
+// filepath: E:\Projekte\Uni\master-thesis-code\frontend\thesis-frontend\src\app\overview\edit-task\picking-view\picking-view.component.scss
+.picking-header-card {
+  margin-bottom: 1rem;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.picking-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.7rem 1.2rem 0.3rem 1.2rem;
+}
+
+.picking-header h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+}
+
+.customer-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.98rem;
+  color: #444;
+  align-items: center;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+.customer-info mat-icon {
+  font-size: 1.1em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
 .actions {
   display: flex;
   justify-content: right;
   gap: 1rem;
   margin-top: 1.5rem;
-
-  button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    background-color: #e0e0e0;
-    transition: background 0.2s ease;
-
-    &:hover {
-      background-color: #ccc;
-    }
-
-    &.edit {
-      background-color: #007bff;
-      color: #fff;
-
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  }
 }
 
-.picking-view h2 {
-  font-weight: 600;
-  font-size: 1.5rem;
+/* Kein Custom-Button-Styling mehr */
+
+.items-list h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .picking-view .task-id {

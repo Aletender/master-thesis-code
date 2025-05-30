@@ -5,6 +5,8 @@ import { StatusBadgeComponent } from '../status-badge/status-badge.component';
 import { TaskActionsComponent } from '../task-actions/task-actions.component';
 import { QrCodeComponent } from '../qr-code/qr-code.component';
 import { WarningIconComponent } from '../warning-icon/warning-icon.component';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { TaskDetailsComponent } from '../task-details/task-details.component';
 
 @Component({
   selector: 'app-task-card',
@@ -22,8 +24,12 @@ import { WarningIconComponent } from '../warning-icon/warning-icon.component';
 export class TaskCardComponent {
   @Input() task!: Task;
 
-  onViewDetails(id: string): void {
-    console.log('Details für Task:', id);
+  constructor(private bottomSheet: MatBottomSheet) {}
+
+  onViewDetails(): void {
+    this.bottomSheet.open(TaskDetailsComponent, {
+      data: { task: this.task }
+    });
   }
 
   onEditTask(id: string): void {

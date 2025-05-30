@@ -7,11 +7,12 @@ import { TaskStatus } from '../models/task.model';
 import { TASK_STATUS_ROUTES } from '../models/task-status-routes';
 import { ConfirmDialogComponent } from '../confirm-dialog/confirm-dialog.component';
 import { TaskService } from '../services/task.service';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-task-actions',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatButton],
   templateUrl: './task-actions.component.html',
   styleUrls: ['./task-actions.component.scss']
 })
@@ -19,13 +20,13 @@ export class TaskActionsComponent {
   @Input() taskId!: string;
   @Input() taskStatus!: TaskStatus;
 
-  @Output() viewDetails = new EventEmitter<string>();
+  @Output() viewDetails = new EventEmitter<void>();
   @Output() editTask = new EventEmitter<string>();
 
   constructor(private router: Router, private dialog: MatDialog, private taskService: TaskService) {}
 
   onView(): void {
-    this.viewDetails.emit(this.taskId);
+    this.viewDetails.emit();
   }
 
   onEdit(): void {
@@ -87,3 +88,4 @@ export class TaskActionsComponent {
     });
   }
 }
+

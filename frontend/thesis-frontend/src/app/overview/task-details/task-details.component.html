@@ -1,0 +1,43 @@
+<div class="task-details">
+  <div class="title">
+    Details zu Aufgabe {{ task?.taskId }}
+  </div>
+  <div class="content">
+    <div>
+      <strong>Kunde:</strong> {{ task?.customerName }}
+    </div>
+    <div>
+      <strong>Zeitraum:</strong> {{ task?.startDate }} – {{ task?.endDate }}
+    </div>
+    <h3>Produkte</h3>
+    <div class="products">
+      <div *ngIf="loading">Produkte werden geladen...</div>
+      <div *ngIf="error">{{ error }}</div>
+      <div *ngIf="!loading && !error">
+        <app-product-card
+          *ngFor="let product of products"
+          [name]="product.name"
+          [description]="product.description"
+          [price]="product.price"
+          [sku]="product.sku"
+          [category]="product.category"
+          [brand]="product.brand"
+          [stockQuantity]="product.stockQuantity"
+          [shelfLocation]="product.shelfLocation"
+          [isColdStorage]="product.isColdStorage"
+          [targetAnimal]="product.targetAnimal"
+          [recommendedAgeGroup]="product.recommendedAgeGroup"
+          [weightGrams]="product.weightGrams"
+          [packSize]="product.packSize"
+          [imageUrl]="product.imageUrl"
+          [tags]="product.tags"
+        >
+        </app-product-card>
+        <div class="product-quantity" *ngFor="let product of products">
+          <span>Menge: {{ getQuantity(product.sku) }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button mat-raised-button color="primary" class="close-button" (click)="close()">Schließen</button>
+</div>

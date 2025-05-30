@@ -1,24 +1,65 @@
-<div class="packing-view" *ngIf="task">
-  <h2>Packing View</h2>
-  <form (ngSubmit)="save()">
+<mat-card class="packing-header-card" appearance="outlined">
+  <div class="packing-header">
     <div>
-      <label for="customerName">Kundenname:</label>
-      <input id="customerName" [(ngModel)]="task.customerName" name="customerName" required />
+      <h2>Packing Order: <span class="task-id">{{ aufgabe?.taskId }}</span></h2>
+      <div class="customer-info">
+        <span><mat-icon inline>person</mat-icon> {{ aufgabe?.customerName }}</span>
+        <span><mat-icon inline>event</mat-icon> {{ aufgabe?.startDate }} – {{ aufgabe?.endDate }}</span>
+      </div>
     </div>
-    <div>
-      <label for="startDate">Startdatum:</label>
-      <input id="startDate" [(ngModel)]="task.startDate" name="startDate" type="date" required />
-    </div>
-    <div>
-      <label for="endDate">Enddatum:</label>
-      <input id="endDate" [(ngModel)]="task.endDate" name="endDate" type="date" required />
-    </div>
-    <button type="submit">Speichern</button>
-  </form>
-
-  <!-- Buttons -->
-  <div class="actions">
-    <button (click)="goBack()">Zurück zur Übersicht</button>
-    <button class="edit" (click)="markAsPacked()">Als verpackt markieren</button>
   </div>
+</mat-card>
+
+<div class="packages-container" cdkDropListGroup>
+  <div *ngFor="let paket of paketListe; let paketIndex = index" class="package-card">
+    <mat-card>
+      <div class="package-header">
+        <span class="package-title">Paket {{ paketIndex + 1 }}</span>
+        <button mat-icon-button color="warn" *ngIf="paketListe.length > 1" (click)="paketEntfernen(paketIndex)" matTooltip="Paket entfernen">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <div
+        cdkDropList
+        [cdkDropListData]="paket.produkte"
+        [cdkDropListConnectedTo]="getDropListIds()"
+        [id]="'packageDropList' + paketIndex"
+        class="package-drop-list"
+        (cdkDropListDropped)="drop($event, paketIndex)"
+      >
+        <div
+          *ngFor="let produkt of paket.produkte; let produktIndex = index"
+          cdkDrag
+          class="package-product-row"
+        >
+          <div class="product-info">
+            <span class="product-name">{{ produkt.produkt.name }}</span>
+            <span class="product-quantity">Anzahl: <span>{{ produkt.anzahl }}</span></span>
+          </div>
+          <div class="product-actions">
+            <button mat-icon-button color="primary" *ngIf="produkt.anzahl > 1" (click)="produktSplitten(paketIndex, produktIndex)" matTooltip="Splitten">
+              <mat-icon>call_split</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" *ngIf="produktIndex > 0 && paket.produkte[produktIndex - 1].sku === produkt.sku" (click)="produktMergen(paketIndex, produktIndex)" matTooltip="Mergen">
+              <mat-icon>merge_type</mat-icon>
+            </button>
+            <mat-icon cdkDragHandle class="drag-handle" matTooltip="Ziehen">drag_indicator</mat-icon>
+          </div>
+        </div>
+        <div *ngIf="paket.produkte.length === 0" class="empty-package-hint">
+          <span>Leeres Paket – Produkte hierher ziehen</span>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+  <div class="add-package-btn">
+    <button mat-raised-button color="primary" (click)="paketHinzufuegen()">
+      <mat-icon>add</mat-icon> Paket hinzufügen
+    </button>
+  </div>
+</div>
+
+<div class="actions">
+  <button mat-raised-button (click)="zurueckZurUebersicht()">Zurück zur Übersicht</button>
+  <button mat-flat-button color="accent" (click)="alsVerpacktMarkieren()">Als verpackt markieren</button>
 </div>

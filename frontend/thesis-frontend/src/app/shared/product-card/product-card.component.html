@@ -1,8 +1,41 @@
-<div class="product-card">
-  <img *ngIf="imageUrl" [src]="imageUrl" alt="{{ name }}" class="product-image" />
-  <div class="product-info">
-    <h3 class="product-name">{{ name }}</h3>
-    <p class="product-price">{{ price | currency:'EUR' }}</p>
-    <p *ngIf="quantity" class="product-quantity">Anzahl: {{ quantity }}</p>
+<mat-card class="product-card">
+  <div class="main-info">
+    <ng-content select="mat-checkbox"></ng-content>
+    <img *ngIf="imageUrl" [src]="imageUrl" alt="{{ name }}" class="product-image" />
+    <div class="product-main-data">
+      <div class="product-header">
+        <span class="product-name">{{ name }}</span>
+        <!-- Preis entfernt -->
+      </div>
+      <div class="product-meta">
+        <div *ngIf="sku" class="product-sku">SKU: {{ sku }}</div>
+        <div *ngIf="quantity !== undefined" class="product-quantity">Anzahl: <span>{{ quantity }}</span></div>
+      </div>
+    </div>
+    <div class="details-toggle-btn-wrapper">
+      <button mat-icon-button color="primary" class="details-toggle-btn"
+              (click)="showDetails = !showDetails"
+              [attr.aria-label]="showDetails ? 'Weniger Details' : 'Mehr Details'">
+        <mat-icon>{{ showDetails ? 'expand_less' : 'expand_more' }}</mat-icon>
+      </button>
+    </div>
   </div>
-</div>
+  <mat-expansion-panel [expanded]="showDetails" class="mat-details-panel" hideToggle>
+    <ng-template matExpansionPanelContent>
+      <div class="details-content">
+        <p *ngIf="price"><strong>Preis:</strong> {{ price | currency:'EUR' }}</p>
+        <p *ngIf="brand"><strong>Marke:</strong> {{ brand }}</p>
+        <p *ngIf="description"><strong>Beschreibung:</strong> {{ description }}</p>
+        <p *ngIf="category"><strong>Kategorie:</strong> {{ category }}</p>
+        <p *ngIf="stockQuantity !== undefined"><strong>Lager:</strong> {{ stockQuantity }}</p>
+        <p *ngIf="shelfLocation"><strong>Regal:</strong> {{ shelfLocation }}</p>
+        <p *ngIf="isColdStorage"><strong>Kühlung:</strong> Ja</p>
+        <p *ngIf="targetAnimal"><strong>Zieltier:</strong> {{ targetAnimal }}</p>
+        <p *ngIf="recommendedAgeGroup"><strong>Alter:</strong> {{ recommendedAgeGroup }}</p>
+        <p *ngIf="weightGrams"><strong>Gewicht:</strong> {{ weightGrams }}g</p>
+        <p *ngIf="packSize"><strong>Packung:</strong> {{ packSize }}</p>
+        <!-- Tags entfernt -->
+      </div>
+    </ng-template>
+  </mat-expansion-panel>
+</mat-card>

@@ -1,3 +1,8 @@
+export interface TaskProduct {
+  sku: string;
+  quantity: number;
+}
+
 export interface Task {
   taskId: string;
   customerName: string;
@@ -7,6 +12,7 @@ export interface Task {
   hasWarning?: boolean;
   isNew?: boolean; // Neu hinzugefügt
   isDeleted?: boolean; // Neu hinzugefügt
+  products: TaskProduct[]; // <-- jetzt Array von Objekten mit sku und quantity
 }
 
 export enum TaskStatus {

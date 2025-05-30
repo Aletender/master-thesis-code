@@ -1,30 +1,170 @@
+// filepath: E:\Projekte\Uni\master-thesis-code\frontend\thesis-frontend\src\app\overview\edit-task\packing-view\packing-view.component.scss
+.packing-header-card {
+  margin-bottom: 1rem;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.packing-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 0.7rem 1.2rem 0.3rem 1.2rem;
+}
+
+.packing-header h2 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin: 0 0 0.2rem 0;
+  line-height: 1.2;
+}
+
+.customer-info {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.98rem;
+  color: #444;
+  align-items: center;
+  margin-bottom: 0.1rem;
+  margin-top: 0.2rem;
+}
+
+.customer-info mat-icon {
+  font-size: 1.1em;
+  vertical-align: middle;
+  margin-right: 0.2em;
+}
+
+.packages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.package-card {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 1 100%;
+}
+
+.package-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem 0.7rem 0.2rem 0.7rem; // angepasstes Padding, damit der Titel nicht übersteht
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.package-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222; // jetzt schwarz
+  letter-spacing: 0.02em;
+  text-align: left;
+  flex: 1;
+  margin: 0; // kein Margin, damit nichts übersteht
+  padding: 0; // kein Padding, damit nichts übersteht
+  line-height: 1.2;
+}
+
+.package-drop-list {
+  min-height: 60px;
+  min-width: 220px;
+  padding: 0.5rem 0.2rem;
+  border: 2px dashed #e0e0e0;
+  border-radius: 6px;
+  background: #fafbfc;
+  margin-bottom: 0.5rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.package-product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 4px;
+  margin-bottom: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  transition: box-shadow 0.2s;
+  cursor: grab;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1976d2;
+  margin-bottom: 0.1rem;
+}
+
+.product-quantity {
+  font-size: 0.93rem;
+  font-weight: bold;
+  color: #388e3c;
+  background: #e8f5e9;
+  border-radius: 4px;
+  padding: 0.05em 0.5em;
+  display: inline-block;
+  width: fit-content;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.drag-handle {
+  cursor: grab;
+  color: #888;
+}
+
+.empty-package-hint {
+  color: #bbb;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.2rem;
+  text-align: center;
+}
+
+.add-package-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center; // Button zentrieren
+  margin-left: 0;
+  margin-top: 1rem;
+  width: 100%; // volle Breite für zentrierte Ausrichtung
+}
+
 .actions {
   display: flex;
   justify-content: right;
   gap: 1rem;
   margin-top: 1.5rem;
+}
 
-  button {
-    padding: 0.5rem 1rem;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    background-color: #e0e0e0;
-    transition: background 0.2s ease;
+.packing-view .task-id {
+  font-family: monospace;
+}
 
-    &:hover {
-      background-color: #ccc;
-    }
-
-    &.edit {
-      background-color: #007bff;
-      color: #fff;
-
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
+@media (max-width: 800px) {
+  .packages-container {
+    gap: 1rem;
+  }
+  .package-card {
+    max-width: 100%;
   }
 }
