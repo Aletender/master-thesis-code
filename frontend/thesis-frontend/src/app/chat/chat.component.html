@@ -1,0 +1,36 @@
+<button mat-fab class="chat-fab-fixed" color="primary" *ngIf="!opened" (click)="toggleChat()" aria-label="Chat öffnen">
+  <mat-icon>chat</mat-icon>
+</button>
+
+<div class="chat-bottom-sheet" *ngIf="opened">
+  <mat-card>
+    <mat-card-title class="chat-header">
+      Chatbot
+      <span class="spacer"></span>
+      <button mat-raised-button color="primary" class="close-button" (click)="toggleChat()">Schließen</button>
+    </mat-card-title>
+    <mat-card-content>
+      <div #chatMessages class="chat-messages">
+        <div *ngFor="let msg of messages">
+          <div [ngClass]="msg.role === 'user' ? 'user-msg' : 'bot-msg'">
+            <div class="msg-bubble" [ngClass]="msg.role">
+              {{ msg.content }}
+            </div>
+          </div>
+        </div>
+        <div *ngIf="loading" class="loading-spinner">
+          <mat-progress-spinner diameter="24" mode="indeterminate"></mat-progress-spinner>
+          <span>Antwort wird geladen...</span>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <form (ngSubmit)="sendMessage()" class="chat-input-row" autocomplete="off">
+        <mat-form-field class="chat-input-field">
+          <input matInput [(ngModel)]="input" name="input" [disabled]="loading" placeholder="Nachricht eingeben..." autocomplete="off" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit" [disabled]="loading || !input.trim()">Senden</button>
+      </form>
+    </mat-card-actions>
+  </mat-card>
+</div>
