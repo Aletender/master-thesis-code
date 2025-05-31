@@ -31,13 +31,17 @@
           [packSize]="product.packSize"
           [imageUrl]="product.imageUrl"
           [tags]="product.tags"
+          [quantity]="getQuantity(product.sku)"
         >
+          <ng-container slot="below-sku">
+            <span class="product-quantity-badge">
+              Anzahl: {{ getQuantity(product.sku) }}
+            </span>
+          </ng-container>
         </app-product-card>
-        <div class="product-quantity" *ngFor="let product of products">
-          <span>Menge: {{ getQuantity(product.sku) }}</span>
-        </div>
       </div>
     </div>
   </div>
   <button mat-raised-button color="primary" class="close-button" (click)="close()">Schließen</button>
 </div>
+

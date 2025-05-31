@@ -30,7 +30,7 @@
         [weightGrams]="product.weightGrams"
         [packSize]="product.packSize"
         [imageUrl]="product.imageUrl"
-        [quantity]="1"
+        [quantity]="getQuantity(product.sku)"
       >
         <mat-checkbox
           mat-card-avatar
@@ -63,3 +63,4 @@
     Als gepickt markieren
   </button>
 </div>
+
