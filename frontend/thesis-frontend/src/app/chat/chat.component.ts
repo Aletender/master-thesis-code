@@ -32,24 +32,30 @@ export class ChatComponent implements AfterViewChecked {
   loading = false;
   messages: { role: 'user' | 'assistant', content: string }[] = [];
   sessionId = Math.random().toString(36).substring(2);
+  private shouldAutoScroll = false; // Nur nach Bot-Antwort true
 
   @ViewChild('chatMessages') chatMessagesRef?: ElementRef<HTMLDivElement>;
 
   constructor(private chatService: ChatService) {}
 
   ngAfterViewChecked() {
-    if (this.opened && this.chatMessagesRef) {
+    if (this.opened && this.chatMessagesRef && this.shouldAutoScroll) {
       setTimeout(() => {
         this.chatMessagesRef?.nativeElement.scrollTo({ top: this.chatMessagesRef.nativeElement.scrollHeight });
+        this.shouldAutoScroll = false; // Nach dem Scrollen wieder deaktivieren
       });
     }
   }
 
   toggleChat() {
     this.opened = !this.opened;
-    if (this.opened) {
-      setTimeout(() => this.chatMessagesRef?.nativeElement.scrollTo({ top: this.chatMessagesRef.nativeElement.scrollHeight }), 100);
-    }
+    // Kein automatisches Scrollen beim Öffnen mehr
+  }
+
+  onScroll() {
+    if (!this.chatMessagesRef) return;
+    const el = this.chatMessagesRef.nativeElement;
+    this.shouldAutoScroll = false; // User scrollt selbst, daher nie auto-scroll
   }
 
   async sendMessage() {
@@ -61,8 +67,10 @@ export class ChatComponent implements AfterViewChecked {
     try {
       const res = await this.chatService.sendMessage(this.messages, this.sessionId);
       this.messages.push({ role: 'assistant', content: res?.result ?? 'Fehler bei der Antwort.' });
+      this.shouldAutoScroll = true; // Nur nach Bot-Antwort auto-scroll aktivieren
     } catch {
       this.messages.push({ role: 'assistant', content: 'Fehler bei der Kommunikation mit dem Bot.' });
+      this.shouldAutoScroll = true;
     }
     this.loading = false;
   }

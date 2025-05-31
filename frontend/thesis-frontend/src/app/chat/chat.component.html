@@ -10,7 +10,7 @@
       <button mat-raised-button color="primary" class="close-button" (click)="toggleChat()">Schließen</button>
     </mat-card-title>
     <mat-card-content>
-      <div #chatMessages class="chat-messages">
+      <div #chatMessages class="chat-messages" (scroll)="onScroll()">
         <div *ngFor="let msg of messages">
           <div [ngClass]="msg.role === 'user' ? 'user-msg' : 'bot-msg'">
             <div class="msg-bubble" [ngClass]="msg.role">
@@ -34,3 +34,4 @@
     </mat-card-actions>
   </mat-card>
 </div>
+
