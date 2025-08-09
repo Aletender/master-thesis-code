@@ -1,110 +1,145 @@
-.upsell-content {
-  padding: 1rem;
+mat-card {
+  margin-bottom: 16px;
+  padding: 14px 14px 10px 14px;
+}
+
+mat-card-title,
+.customer-card mat-card-title,
+.product-card mat-card-title {
+  color: #222 !important;
+}
+
+mat-card-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #512da8;
+  letter-spacing: 0.01em;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.customer-card mat-card-title {
+  color: #1976d2;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.product-card mat-card-title {
+  color: #8e24aa;
+  font-size: 1.13rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+mat-card-content > div {
+  margin-bottom: 6px;
+  font-size: 0.98rem;
+}
+
+.label {
+  font-weight: 500;
+  color: #444;
+  margin-right: 0.3em;
+  font-size: 1em;
+  text-transform: none;
+  opacity: 1;
+}
+
+.value {
+  color: #222;
+}
+
+.customer-card {
+  background: #fafbfc;
+}
+
+.recommend-card {
+  background: #fafbfc;
+  margin-top: 16px;
+}
+
+.pet-list {
+  margin: 0;
+  padding: 0;
+}
+
+.pet-list-item {
+  margin-bottom: 4px;
+  font-size: 0.98rem;
+}
+
+.product-navigation-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.2em;
+  gap: 0.2em;
+  width: 100%;
+}
+
+.product-navigation-buttons button {
+  min-width: 90px;
+  padding: 0.3em 0.7em;
+}
+
+.product-index-info {
+  flex: 1;
   text-align: center;
-  max-width: 90vw;
-  max-height: 90vh;
-  overflow-y: auto;
-
-  h2.customer-name {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
-
-    mat-icon {
-      vertical-align: middle;
-      margin-left: 0.5rem;
-      font-size: 1.2rem;
-    }
-  }
-
-  .pet-info {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: left;
-
-    .info-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 0.5rem;
-
-      .fact-text {
-        color: #2196f3;
-        flex: 1;
-        margin-right: 0.5rem;
-      }
-
-      mat-icon {
-        font-size: 1rem;
-        color: #2196f3;
-      }
-    }
-
-    .inline-toggle-button {
-      display: block;
-      margin: 1rem auto 0;
-      font-size: 0.8rem;
-      color: #1976d2;
-      background: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
-  mat-divider {
-    margin: 1rem 0;
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-
-    li {
-      margin: 0.5rem 0;
-
-      .fact-text {
-        color: #2196f3;
-      }
-    }
-  }
-
-  button {
-    margin-top: 1rem;
-  }
+  font-size: 1em;
+  color: #6a1b9a;
 }
 
-.product-item {
-  margin-bottom: 1.5rem;
-
-  .product-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .product-hints {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-
-    mat-chip-option {
-      font-size: 0.85rem;
-      color: #ffffff;
-      background-color: #7b1fa2;
-      border-radius: 16px;
-      padding: 0.5rem 1rem;
-
-      &:hover {
-        background-color: #7b1fa2;
-      }
-    }
-  }
+.pet-icon {
+  font-size: 1.2em;
+  margin-right: 0.4em;
+  vertical-align: middle;
 }
 
-.ki-text {
-  color: #7b1fa2;
+mat-divider {
+  margin: 10px 0;
+}
+
+.pets-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #1976d2;
+  margin: 10px 0 6px 0;
+  letter-spacing: 0.01em;
+  text-align: left;
+}
+
+.pet-name {
+  font-weight: 600;
+  color: #1976d2;
+  font-size: 1.04em;
+  margin-right: 0.2em;
+}
+
+.pet-reason {
+  color: #8e24aa;
+  font-weight: 500;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+  font-size: 0.97em;
+}
+
+.customer-reason {
+  color: #8e24aa;
+  font-weight: 500;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
+  font-size: 0.97em;
+}
+
+.customer-label {
+  color: #1976d2;
+  font-weight: 600;
+  font-size: 1em;
+  margin-right: 0.3em;
 }

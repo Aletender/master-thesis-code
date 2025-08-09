@@ -1,0 +1,112 @@
+[
+  {
+    "run_index": 1,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_Dny6oxAz11S1Ax2reVm9LZUE",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1228,
+      "completion_tokens": 23,
+      "total_tokens": 1251
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 14 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 2,
+    "status": "completed",
+    "duration_seconds": 19.0,
+    "run_id": "run_1GUhRlQaUdIRk1LFkPPDKIAX",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4173,
+      "completion_tokens": 414,
+      "total_tokens": 4587
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: XKSLOOYM\nKunde: Anna Müller (CUST-2025-7162)\nZeitraum: 2025-06-06 bis 2025-06-09\nStatus: PACKED\nAchtung: Nein\nProdukte:\n- SKU: 8001154124692, Menge: 1\n- SKU: 4000158776005, Menge: 4\n- SKU: 5410340512464, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7162\",\n  \"customerName\": \"Anna Müller\",\n  \"petRecommendations\": {\n    \"Wellensittich\": [\n      {\n        \"reason\": \"Ein Wellensittich braucht viel Platz zum Fliegen und Spielzeug, um aktiv zu bleiben.\"\n      }\n    ],\n    \"Papagei\": [\n      {\n        \"reason\": \"Der Papagei benötigt regelmäßige Interaktion und geistige Anregung durch Spielzeuge und Rätsel.\"\n      },\n      {\n        \"reason\": \"Achten Sie auf eine ausgewogene Ernährung, die die spezifischen Bedürfnisse älterer Vögel berücksichtigt.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um Treuepunkte zu sammeln und Rabatte zu erhalten.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"5410340512464\",\n      \"reason\": \"Premium-Mischung für große Papageienarten, ideal für Ihren Papagei.\"\n    },\n    {\n      \"sku\": \"4024344001112\",\n      \"reason\": \"Ausgewogenes Alleinfutter für Wellensittiche, perfekt für Ihren Wellensittich.\"\n    },\n    {\n      \"sku\": \"4000158776005\",\n      \"reason\": \"Nassfutter für sensible Hunde, falls Sie auch einen Hund haben.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 15.0,
+    "run_id": "run_ydNgMF6i4Tyds2Curwj4htVd",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4206,
+      "completion_tokens": 395,
+      "total_tokens": 4601
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: XKSLOOYM\nKunde: Anna Müller (CUST-2025-7162)\nZeitraum: 2025-06-06 bis 2025-06-09\nStatus: PACKED\nAchtung: Nein\nProdukte:\n- SKU: 8001154124692, Menge: 1\n- SKU: 4000158776005, Menge: 4\n- SKU: 5410340512464, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7162\",\n  \"customerName\": \"Anna Müller\",\n  \"petRecommendations\": {\n    \"Wellensittich\": [\n      {\n        \"reason\": \"A 13-jähriger Wellensittich benötigt eine ausgewogene Ernährung und regelmäßige Bewegung, um gesund zu bleiben.\"\n      }\n    ],\n    \"Papagei\": [\n      {\n        \"reason\": \"Bei einem 6-jährigen Papagei sollte das Wortschatztraining spielerisch gefördert werden, um Langeweile zu vermeiden.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"5410340512464\",\n      \"reason\": \"Premium-Mischung für große Papageienarten, ideal für Ihren Papagei.\"\n    },\n    {\n      \"sku\": \"4024344001112\",\n      \"reason\": \"Ausgewogenes Alleinfutter für Wellensittiche, perfekt für Ihren Wellensittich.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Vögel, ideal zur Beschäftigung und als Snack.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

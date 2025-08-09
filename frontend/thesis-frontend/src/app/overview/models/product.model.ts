@@ -14,4 +14,5 @@ export interface Product {
   packSize?: number;
   imageUrl?: string;
   tags?: string[];
+  reason?: string;
 }

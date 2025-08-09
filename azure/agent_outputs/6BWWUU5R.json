@@ -1,0 +1,108 @@
+[
+  {
+    "run_index": 2,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_DREr2lGiNVETJ6xgKWw5TI1y",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2618,
+      "completion_tokens": 69,
+      "total_tokens": 2687
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 22 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 3,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_jAdCL30pXM2H14sJq0NPrV9g",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1215,
+      "completion_tokens": 23,
+      "total_tokens": 1238
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 8 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 20.0,
+    "run_id": "run_pcljIbtVUuehd2YCKvW6res4",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4184,
+      "completion_tokens": 405,
+      "total_tokens": 4589
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 6BWWUU5R\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-10\nStatus: CANCELED\nAchtung: Nein\nProdukte:\n- SKU: 729849139429, Menge: 3\n- SKU: 4024344071740, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Nala_Kaninchen\": [\n      {\n        \"reason\": \"Nala, Ihr 4-jähriges Widderkaninchen, benötigt viel Platz zum Hoppeln und frisches Gemüse für eine ausgewogene Ernährung.\"\n      }\n    ],\n    \"Luna_Katze\": [\n      {\n        \"reason\": \"Die 13-jährige Siamkatze Luna sollte regelmäßig auf gesundheitliche Probleme überprüft werden, da ältere Katzen häufig spezielle Bedürfnisse haben.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Käufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"744845402502\",\n      \"reason\": \"Premiumfutter für Nala, das speziell für ausgewachsene Kaninchen geeignet ist.\"\n    },\n    {\n      \"sku\": \"5060122541384\",\n      \"reason\": \"Nassfutter für Luna, ideal für ältere Katzen mit natürlichen Zutaten.\"\n    },\n    {\n      \"sku\": \"4024344071740\",\n      \"reason\": \"Spiel- und Rückzugsort für Nala, fördert Beschäftigung und Wohlbefinden.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

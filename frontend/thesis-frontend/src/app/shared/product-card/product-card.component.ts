@@ -30,6 +30,7 @@ export class ProductCardComponent {
   @Input() imageUrl?: string;
   @Input() tags?: string[];
   @Input() quantity?: number;
+  @Input() reason?: string;
 
   showDetails = false;
 }

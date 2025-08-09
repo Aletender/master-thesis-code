@@ -1,0 +1,112 @@
+[
+  {
+    "run_index": 1,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_1yKwReFzCG9TfQQb3rPHDTBL",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1260,
+      "completion_tokens": 23,
+      "total_tokens": 1283
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 1 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 2,
+    "status": "completed",
+    "duration_seconds": 22.0,
+    "run_id": "run_7qvRb34nNW4H0vBiUqtYClBO",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4279,
+      "completion_tokens": 384,
+      "total_tokens": 4663
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: E7SCGOI9\nKunde: Mia Weber (CUST-2025-7776)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: IN_PICKING\nAchtung: Nein\nProdukte:\n- SKU: 4016598034458, Menge: 4\n- SKU: 4260210271997, Menge: 1\n- SKU: 4000498032502, Menge: 3\n- SKU: 8001154124692, Menge: 4\n- SKU: 4025332930459, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7776\",\n  \"customerName\": \"Mia Weber\",\n  \"petRecommendations\": {\n    \"Luna_Kaninchen\": [\n      {\n        \"reason\": \"Neutrierte Kaninchen wie Luna benötigen möglicherweise weniger Futter, achten Sie auf deren Gewicht.\"\n      }\n    ],\n    \"Simba_Kaninchen\": [\n      {\n        \"reason\": \"Regelmäßige tierärztliche Kontrollen sind wichtig, insbesondere wegen der älteren Tiere wie Simba (12 Jahre).\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm für Treuepunkte bei jedem Einkauf.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4016598034458\",\n      \"reason\": \"Transportbox für Kaninchen geeignet – sicherer Transport.\"\n    },\n    {\n      \"sku\": \"4000498032502\",\n      \"reason\": \"Flexi Rollleine für Kaninchen – ideal für Spaziergänge.\"\n    },\n    {\n      \"sku\": \"4025332930459\",\n      \"reason\": \"Nahrungsergänzung für gesunde Ernährung – wichtig für Kaninchen.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 26.0,
+    "run_id": "run_IYVwfBgZSivXwC72bK1LIrrn",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4297,
+      "completion_tokens": 434,
+      "total_tokens": 4731
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: E7SCGOI9\nKunde: Mia Weber (CUST-2025-7776)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: IN_PICKING\nAchtung: Nein\nProdukte:\n- SKU: 4016598034458, Menge: 4\n- SKU: 4260210271997, Menge: 1\n- SKU: 4000498032502, Menge: 3\n- SKU: 8001154124692, Menge: 4\n- SKU: 4025332930459, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7776\",\n  \"customerName\": \"Mia Weber\",\n  \"petRecommendations\": {\n    \"Simba_Widderkaninchen\": [\n      {\n        \"reason\": \"Achten Sie auf die Ernährung Ihrer Widderkaninchen für eine gesunde Verdauung.\"\n      }\n    ],\n    \"Luna_Löwenkopfkaninchen\": [\n      {\n        \"reason\": \"Löwenkopfkaninchen benötigen viel Aufmerksamkeit und sollten regelmäßig gestreichelt werden.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Regelmäßige tierärztliche Kontrollen sind wichtig, vor allem für das ältere Kaninchen Simba.\"\n    },\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und Tipps zur Kaninchenhaltung.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie lokale Angebote in unserem Geschäft für spezielle Rabatte auf Tierbedarf.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"744845402502\",\n      \"reason\": \"Premiumfutter für ausgewachsene Kaninchen, ideal für Widderkaninchen und Löwenkopfkaninchen.\"\n    },\n    {\n      \"sku\": \"4024344071740\",\n      \"reason\": \"Essbarer Spiel- und Rückzugsort für Kaninchen, fördert Beschäftigung und Wohlbefinden.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Kaninchen, ideal zur Beschäftigung und als Snack.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

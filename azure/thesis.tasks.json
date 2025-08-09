@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "6842c221d4bd95bc1d356afa"
+  },
+  "customerId": "CUST-2025-4342",
+  "customerName": "Max Meyer",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-07",
+  "status": "READY4PICKUP",
+  "hasWarning": true,
+  "taskId": "B8R2ADZ3",
+  "products": [
+    {
+      "sku": "4001942451504",
+      "quantity": 3
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c240d4bd95bc1d356b09"
+  },
+  "customerId": "CUST-2025-2350",
+  "customerName": "Ben Schneider",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-11",
+  "status": "READY4PICKUP",
+  "hasWarning": true,
+  "taskId": "PAG708GD",
+  "products": [
+    {
+      "sku": "4011905331438",
+      "quantity": 5
+    },
+    {
+      "sku": "4032314000152",
+      "quantity": 5
+    },
+    {
+      "sku": "5060122541384",
+      "quantity": 1
+    },
+    {
+      "sku": "4260172783112",
+      "quantity": 2
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c242d4bd95bc1d356b0e"
+  },
+  "customerId": "CUST-2025-4342",
+  "customerName": "Max Meyer",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-09",
+  "status": "READY4PICKUP",
+  "hasWarning": true,
+  "taskId": "LMJUM34X",
+  "products": [
+    {
+      "sku": "4040056001124",
+      "quantity": 1
+    },
+    {
+      "sku": "4011905047583",
+      "quantity": 3
+    },
+    {
+      "sku": "729849139429",
+      "quantity": 2
+    },
+    {
+      "sku": "7300330057162",
+      "quantity": 2
+    },
+    {
+      "sku": "4016739640345",
+      "quantity": 5
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c243d4bd95bc1d356b13"
+  },
+  "customerId": "CUST-2025-4342",
+  "customerName": "Max Meyer",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-10",
+  "status": "CANCELED",
+  "hasWarning": false,
+  "taskId": "6BWWUU5R",
+  "products": [
+    {
+      "sku": "729849139429",
+      "quantity": 3
+    },
+    {
+      "sku": "4024344071740",
+      "quantity": 5
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c243d4bd95bc1d356b18"
+  },
+  "customerId": "CUST-2025-4342",
+  "customerName": "Max Meyer",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-08",
+  "status": "READY4PICKUP",
+  "hasWarning": true,
+  "taskId": "7OGVABH3",
+  "products": [
+    {
+      "sku": "4001967012711",
+      "quantity": 2
+    },
+    {
+      "sku": "4011905331438",
+      "quantity": 2
+    },
+    {
+      "sku": "4008239218160",
+      "quantity": 3
+    },
+    {
+      "sku": "3182550715651",
+      "quantity": 1
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c244d4bd95bc1d356b1d"
+  },
+  "customerId": "CUST-2025-7162",
+  "customerName": "Anna Müller",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-09",
+  "status": "PACKED",
+  "hasWarning": false,
+  "taskId": "XKSLOOYM",
+  "products": [
+    {
+      "sku": "8001154124692",
+      "quantity": 1
+    },
+    {
+      "sku": "4000158776005",
+      "quantity": 4
+    },
+    {
+      "sku": "5410340512464",
+      "quantity": 1
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c245d4bd95bc1d356b22"
+  },
+  "customerId": "CUST-2025-2350",
+  "customerName": "Ben Schneider",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-09",
+  "status": "PACKED",
+  "hasWarning": true,
+  "taskId": "N01E3NYZ",
+  "products": [
+    {
+      "sku": "9120059600813",
+      "quantity": 2
+    },
+    {
+      "sku": "4032314000152",
+      "quantity": 4
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842c246d4bd95bc1d356b27"
+  },
+  "customerId": "CUST-2025-7776",
+  "customerName": "Mia Weber",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-11",
+  "status": "PICKED_UP",
+  "hasWarning": false,
+  "taskId": "MRPFEMMQ",
+  "products": [
+    {
+      "sku": "8001154124692",
+      "quantity": 3
+    },
+    {
+      "sku": "4040056010195",
+      "quantity": 5
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842ef6eb2dd1bd31ea721fd"
+  },
+  "customerId": "CUST-2025-4273",
+  "customerName": "Paul Schmidt",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-11",
+  "status": "PACKED",
+  "hasWarning": true,
+  "taskId": "3ONGIKOO",
+  "products": [
+    {
+      "sku": "5410340512464",
+      "quantity": 3
+    },
+    {
+      "sku": "4025332920047",
+      "quantity": 4
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842ef70b2dd1bd31ea72202"
+  },
+  "customerId": "CUST-2025-7776",
+  "customerName": "Mia Weber",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-11",
+  "status": "IN_PICKING",
+  "hasWarning": false,
+  "taskId": "E7SCGOI9",
+  "products": [
+    {
+      "sku": "4016598034458",
+      "quantity": 4
+    },
+    {
+      "sku": "4260210271997",
+      "quantity": 1
+    },
+    {
+      "sku": "4000498032502",
+      "quantity": 3
+    },
+    {
+      "sku": "8001154124692",
+      "quantity": 4
+    },
+    {
+      "sku": "4025332930459",
+      "quantity": 5
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842ef71b2dd1bd31ea72207"
+  },
+  "customerId": "CUST-2025-4273",
+  "customerName": "Paul Schmidt",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-08",
+  "status": "IN_PACKING",
+  "hasWarning": false,
+  "taskId": "03263AMP",
+  "products": [
+    {
+      "sku": "4260165160253",
+      "quantity": 2
+    },
+    {
+      "sku": "4011905331438",
+      "quantity": 2
+    },
+    {
+      "sku": "5902414201242",
+      "quantity": 4
+    },
+    {
+      "sku": "4011905408001",
+      "quantity": 1
+    }
+  ],
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6842ef72b2dd1bd31ea7220c"
+  },
+  "customerId": "CUST-2025-2669",
+  "customerName": "Laura Weber",
+  "startDate": "2025-06-06",
+  "endDate": "2025-06-11",
+  "status": "PICKED",
+  "hasWarning": true,
+  "taskId": "6XXY99TV",
+  "products": [
+    {
+      "sku": "4032254745203",
+      "quantity": 4
+    },
+    {
+      "sku": "5060180391962",
+      "quantity": 2
+    },
+    {
+      "sku": "4008239252348",
+      "quantity": 2
+    },
+    {
+      "sku": "4260165161359",
+      "quantity": 3
+    },
+    {
+      "sku": "4016739642301",
+      "quantity": 1
+    }
+  ],
+  "__v": 0
+}]

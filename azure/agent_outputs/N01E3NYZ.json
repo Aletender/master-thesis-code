@@ -1,0 +1,104 @@
+[
+  {
+    "run_index": 1,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_JSYKZeElM7izYmSbQbWP7QeQ",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2589,
+      "completion_tokens": 71,
+      "total_tokens": 2660
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 18 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 2,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_Ce0HA39Rz7vWi0sOggfrBJLV",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2591,
+      "completion_tokens": 68,
+      "total_tokens": 2659
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 18 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 3,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_4xXY048OL6bSrh2dL7j3Hlyv",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2606,
+      "completion_tokens": 54,
+      "total_tokens": 2660
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 3 seconds."
+      }
+    }
+  }
+]

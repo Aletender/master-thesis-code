@@ -113,7 +113,9 @@ Schließen Sie den Vorgang ab:
   }
 
   openUpsellSheet(): void {
-    this.bottomSheet.open(CustomerUpsellComponent);
+    this.bottomSheet.open(CustomerUpsellComponent, {
+      data: { taskId: this.task?.taskId }
+    });
   }
 }
 

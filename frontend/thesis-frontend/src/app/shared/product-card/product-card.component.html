@@ -11,6 +11,7 @@
         <div *ngIf="sku" class="product-sku">SKU: {{ sku }}</div>
         <div *ngIf="quantity !== undefined" class="product-quantity">Anzahl: <span>{{ quantity }}</span></div>
       </div>
+      <p *ngIf="reason" class="product-reason">{{ reason }}</p>
     </div>
     <div class="details-toggle-btn-wrapper">
       <button mat-icon-button color="primary" class="details-toggle-btn"
@@ -34,7 +35,6 @@
         <p *ngIf="recommendedAgeGroup"><strong>Alter:</strong> {{ recommendedAgeGroup }}</p>
         <p *ngIf="weightGrams"><strong>Gewicht:</strong> {{ weightGrams }}g</p>
         <p *ngIf="packSize"><strong>Packung:</strong> {{ packSize }}</p>
-        <!-- Tags entfernt -->
       </div>
     </ng-template>
   </mat-expansion-panel>

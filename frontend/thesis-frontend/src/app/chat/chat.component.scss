@@ -151,3 +151,21 @@ mat-card-actions {
 }
 
 /* Entferne .chat-bottom-sheet-panel Styles, da nicht mehr benötigt */
+
+.code-bubble {
+  background: #23272e;
+  color: #e0e0e0;
+  font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin: 4px 0;
+}
+
+.code-bubble code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}

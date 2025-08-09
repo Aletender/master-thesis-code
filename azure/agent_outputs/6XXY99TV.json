@@ -1,0 +1,112 @@
+[
+  {
+    "run_index": 2,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_sqz7L9nXkeDsNVhnxcbmS4EY",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2691,
+      "completion_tokens": 101,
+      "total_tokens": 2792
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 3 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 31.0,
+    "run_id": "run_0zt4IrbZUKpRzteoH3zPMpDK",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4388,
+      "completion_tokens": 509,
+      "total_tokens": 4897
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 6XXY99TV\nKunde: Laura Weber (CUST-2025-2669)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: PICKED\nAchtung: Ja\nProdukte:\n- SKU: 4032254745203, Menge: 4\n- SKU: 5060180391962, Menge: 2\n- SKU: 4008239252348, Menge: 2\n- SKU: 4260165161359, Menge: 3\n- SKU: 4016739642301, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-2669\",\n  \"customerName\": \"Laura Weber\",\n  \"petRecommendations\": {\n    \"Rocky_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie darauf, Rocky, Ihren 13-jährigen Widder-Kaninchen, regelmäßig zu tierärztlichen Kontrollen zu bringen, um Alterskrankheiten vorzubeugen.\"\n      }\n    ],\n    \"Bello_Hund\": [\n      {\n        \"reason\": \"Bello und Nala, beide 4 Jahre alt, profitieren von einer ausgewogenen Ernährung für aktives Wachstum. Stellen Sie hochwertiges Heu und frisches Gemüse bereit.\"\n      }\n    ],\n    \"Nala_Katze\": [\n      {\n        \"reason\": \"Da Nala nicht kastriert ist, sollten Sie die Vor- und Nachteile einer Kastration in Betracht ziehen, um Verhaltensprobleme und ungewollte Würfe zu vermeiden.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um Treuepunkte zu sammeln und Rabatte zu erhalten.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe, um von speziellen Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4032254745203\",\n      \"reason\": \"Premium Trockenfutter für Bello, ideal für aktive Hunde.\"\n    },\n    {\n      \"sku\": \"4016739642301\",\n      \"reason\": \"Robustes Halsband für Bello, sorgt für Sicherheit beim Spaziergang.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Rocky, ideal zur Beschäftigung und Zahnpflege.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 22.0,
+    "run_id": "run_GkTnakauH83cwysFbs3K9OKr",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4349,
+      "completion_tokens": 522,
+      "total_tokens": 4871
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 6XXY99TV\nKunde: Laura Weber (CUST-2025-2669)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: PICKED\nAchtung: Ja\nProdukte:\n- SKU: 4032254745203, Menge: 4\n- SKU: 5060180391962, Menge: 2\n- SKU: 4008239252348, Menge: 2\n- SKU: 4260165161359, Menge: 3\n- SKU: 4016739642301, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-2669\",\n  \"customerName\": \"Laura Weber\",\n  \"petRecommendations\": {\n    \"Rocky_Widder\": [\n      {\n        \"reason\": \"Achten Sie darauf, dass Rocky, der 13 Jahre alte Widder, genügend Bewegung erhält, um Übergewicht zu vermeiden.\"\n      },\n      {\n        \"reason\": \"Regelmäßige Tierarztbesuche sind wichtig, besonders für nicht kastrierte Kaninchen wie Rocky.\"\n      }\n    ],\n    \"Nala_Zwergkaninchen\": [\n      {\n        \"reason\": \"Für Nala, das 4-jährige Zwergkaninchen, empfehlen wir, viel frisches Gemüse in die Ernährung einzuführen.\"\n      },\n      {\n        \"reason\": \"Regelmäßige Tierarztbesuche sind wichtig, besonders für nicht kastrierte Kaninchen wie Nala.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und Tipps zur Tierhaltung.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen zu sparen.\"\n    },\n    {\n      \"reason\": \"Fragen Sie nach lokalen Angeboten in Ihrem Geschäft, um von Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4032254745203\",\n      \"reason\": \"Premium Trockenfutter für Rocky, ideal für ältere Hunde. Hoher Lachsanteil, unterstützt die Gesundheit.\"\n    },\n    {\n      \"sku\": \"4260165161359\",\n      \"reason\": \"Getreidefreies Trockenfutter für Rocky, speziell für kleine Rassen. Gut für die Ernährung älterer Hunde.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Nala, ideal zur Beschäftigung und als Snack. Fördert die Zahngesundheit.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

@@ -74,4 +74,16 @@ export class ChatComponent implements AfterViewChecked {
     }
     this.loading = false;
   }
+
+  isJsonCodeBlock(msg: { role: string; content: string }): boolean {
+    if (msg.role !== 'assistant') return false;
+    const trimmed = msg.content.trim();
+    return trimmed.startsWith('```json') && trimmed.endsWith('```');
+  }
+
+  extractJsonFromCodeBlock(msg: { role: string; content: string }): string | null {
+    if (!this.isJsonCodeBlock(msg)) return null;
+    // Entferne die Markdown-Formatierung
+    return msg.content.trim().replace(/^```json[\r\n]*/i, '').replace(/```$/, '').trim();
+  }
 }

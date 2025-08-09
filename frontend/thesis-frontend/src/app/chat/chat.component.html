@@ -13,9 +13,16 @@
       <div #chatMessages class="chat-messages" (scroll)="onScroll()">
         <div *ngFor="let msg of messages">
           <div [ngClass]="msg.role === 'user' ? 'user-msg' : 'bot-msg'">
-            <div class="msg-bubble" [ngClass]="msg.role">
-              {{ msg.content }}
-            </div>
+            <ng-container *ngIf="isJsonCodeBlock(msg); else normalMsg">
+              <pre class="msg-bubble code-bubble" [ngClass]="msg.role">
+                <code>{{ extractJsonFromCodeBlock(msg) }}</code>
+              </pre>
+            </ng-container>
+            <ng-template #normalMsg>
+              <div class="msg-bubble" [ngClass]="msg.role">
+                {{ msg.content }}
+              </div>
+            </ng-template>
           </div>
         </div>
         <div *ngIf="loading" class="loading-spinner">
@@ -34,4 +41,3 @@
     </mat-card-actions>
   </mat-card>
 </div>
-

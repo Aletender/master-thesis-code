@@ -1,0 +1,112 @@
+[
+  {
+    "run_index": 1,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_jfZs6lWtLCEFnf2OwMFk6KKP",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2693,
+      "completion_tokens": 70,
+      "total_tokens": 2763
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 1 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 2,
+    "status": "completed",
+    "duration_seconds": 16.0,
+    "run_id": "run_wBaHjUcJeJVvbiqvxMmoM5Zy",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4297,
+      "completion_tokens": 416,
+      "total_tokens": 4713
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: LMJUM34X\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-09\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4040056001124, Menge: 1\n- SKU: 4011905047583, Menge: 3\n- SKU: 729849139429, Menge: 2\n- SKU: 7300330057162, Menge: 2\n- SKU: 4016739640345, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Nala_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie auf eine ausgewogene Ernährung mit frischem Gemüse und speziellen Pellets.\"\n      }\n    ],\n    \"Luna_Papagei\": [\n      {\n        \"reason\": \"Benötigt regelmäßig soziale Interaktion und Spielzeug, um gesund und glücklich zu bleiben.\"\n      }\n    ],\n    \"Luna_Katze\": [\n      {\n        \"reason\": \"Benötigt viel Pflege, insbesondere regelmäßiges Bürsten, um ihr schönes Fell in gutem Zustand zu halten.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um Treuepunkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4040056001124\",\n      \"reason\": \"Ergänzung für BARF-Ernährung – ideal für gesunde Hunde.\"\n    },\n    {\n      \"sku\": \"4011905047583\",\n      \"reason\": \"Katzenspielzeug mit Minze – perfekt für aktive Kätzchen.\"\n    },\n    {\n      \"sku\": \"7300330057162\",\n      \"reason\": \"Nassfutter mit Elch für Katzen – hochwertig und schmackhaft.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 16.0,
+    "run_id": "run_XqEuTlRxU81mxpSZS4boT2bm",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4324,
+      "completion_tokens": 472,
+      "total_tokens": 4796
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: LMJUM34X\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-09\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4040056001124, Menge: 1\n- SKU: 4011905047583, Menge: 3\n- SKU: 729849139429, Menge: 2\n- SKU: 7300330057162, Menge: 2\n- SKU: 4016739640345, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Nala_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie darauf, dass Ihr nicht kastriertes Zwergkaninchen Nala ausreichend Platz hat, um sich zu bewegen und zu vergnügen.\"\n      }\n    ],\n    \"Luna_Papagei\": [\n      {\n        \"reason\": \"Für Ihren achtjährigen Papagei Luna könnten regelmäßige Spielzeiten hilfreich sein, um die geistige Gesundheit zu fördern.\"\n      }\n    ],\n    \"Luna_Katze\": [\n      {\n        \"reason\": \"Da Ihre Siamkatze Luna nicht kastriert ist, sollten regelmäßige Tierarztbesuche zur Gesundheitsüberwachung eingeplant werden.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um Treuepunkte zu sammeln und Rabatte zu erhalten.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4040056001124\",\n      \"reason\": \"Nahrungsergänzung für die Gesundheit von Kaninchen, unterstützt die Mineralstoffversorgung.\"\n    },\n    {\n      \"sku\": \"5410340512464\",\n      \"reason\": \"Premiumfutter für Papageien, sorgt für eine ausgewogene Ernährung.\"\n    },\n    {\n      \"sku\": \"7300330059104\",\n      \"reason\": \"Nassfutter für ältere Katzen, ideal für die Siamkatze, die möglicherweise spezielle Ernährung benötigt.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

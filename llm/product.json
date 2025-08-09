@@ -1,0 +1,23 @@
+{
+  "_id": {
+    "$oid": "68385ad9ebfb5afd7e144e47"
+  },
+  "name": "Royal Canin Mini Adult",
+  "description": "Alleinfuttermittel für ausgewachsene Hunde kleiner Rassen ab 10 Monaten.",
+  "price": 18.99,
+  "sku": "3182550793147",
+  "category": "Nahrung",
+  "brand": "Royal Canin",
+  "stockQuantity": 120,
+  "shelfLocation": "Regal B1 Mitte",
+  "isColdStorage": false,
+  "targetAnimal": "Hund",
+  "recommendedAgeGroup": "Adult",
+  "weightGrams": 800,
+  "packSize": 1,
+  "imageUrl": "https://picsum.photos/seed/rc-mini-adult/600/400",
+  "tags": [
+    "getreidefrei",
+    "kleine-rassen"
+  ]
+}

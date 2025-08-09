@@ -1,5 +1,5 @@
 <div class="pickup-view">
-  <h2>Pickup Checklist</h2>
+  <h2>Pickup Checklist for {{task.taskId}}</h2>
   <div class="checklist">
     <div *ngFor="let step of checklist; let i = index" class="checklist-card" [ngClass]="{ 'pulsing-action': step.action }">
       <div class="number">{{ i + 1 }}</div>

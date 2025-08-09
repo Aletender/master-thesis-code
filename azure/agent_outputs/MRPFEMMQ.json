@@ -1,0 +1,116 @@
+[
+  {
+    "run_index": 2,
+    "status": "completed",
+    "duration_seconds": 17.0,
+    "run_id": "run_vzdcsEPqgMHaoz6EogMwAgXp",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4257,
+      "completion_tokens": 644,
+      "total_tokens": 4901
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: MRPFEMMQ\nKunde: Mia Weber (CUST-2025-7776)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: PICKED_UP\nAchtung: Nein\nProdukte:\n- SKU: 8001154124692, Menge: 3\n- SKU: 4040056010195, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7776\",\n  \"customerName\": \"Mia Weber\",\n  \"petRecommendations\": {\n    \"Bunny_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie auf die Ernährung Ihrer kastrierten Widderkaninchen, um Übergewicht zu vermeiden.\"\n      },\n      {\n        \"reason\": \"Regelmäßige Fellpflege ist wichtig, insbesondere für den Löwenkopfrassen, um Verfilzungen zu vermeiden.\"\n      },\n      {\n        \"reason\": \"Beobachten Sie die sozialen Interaktionen zwischen Ihren Kaninchen, um sicherzustellen, dass sie glücklich und gesund sind.\"\n      }\n    ],\n    \"Fluffy_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie auf die Ernährung Ihrer kastrierten Widderkaninchen, um Übergewicht zu vermeiden.\"\n      },\n      {\n        \"reason\": \"Regelmäßige Fellpflege ist wichtig, insbesondere für den Löwenkopfrassen, um Verfilzungen zu vermeiden.\"\n      },\n      {\n        \"reason\": \"Beobachten Sie die sozialen Interaktionen zwischen Ihren Kaninchen, um sicherzustellen, dass sie glücklich und gesund sind.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und Tipps zur Kaninchenhaltung.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Fragen Sie nach lokalen Angeboten in Ihrem Geschäft, um von Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"744845402502\",\n      \"reason\": \"Premiumfutter für Bunny (Widder, 2 Jahre) – speziell für ausgewachsene Kaninchen geeignet.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Fluffy (Löwenkopf, 1 Jahr) – ideal für die Beschäftigung und als Snack.\"\n    },\n    {\n      \"sku\": \"4024344071740\",\n      \"reason\": \"Essbarer Spiel- und Rückzugsort für beide Kaninchen – fördert Spiel und Entspannung.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 19.0,
+    "run_id": "run_as744lOSoTUkSmYKS4AhkdHU",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4146,
+      "completion_tokens": 420,
+      "total_tokens": 4566
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: MRPFEMMQ\nKunde: Mia Weber (CUST-2025-7776)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: PICKED_UP\nAchtung: Nein\nProdukte:\n- SKU: 8001154124692, Menge: 3\n- SKU: 4040056010195, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7776\",\n  \"customerName\": \"Mia Weber\",\n  \"petRecommendations\": {\n    \"Simba_Widderkaninchen\": [\n      {\n        \"reason\": \"Achte darauf, dass deine Widderkaninchen regelmäßig Gras und frisches Gemüse erhalten, um ihre Zähne gesund zu halten.\"\n      },\n      {\n        \"reason\": \"Die Kastration deines älteren Kaninchens Simba kann helfen, Verhaltensprobleme zu minimieren.\"\n      },\n      {\n        \"reason\": \"Überprüfe den Wohnraum deiner Kaninchen regelmäßig auf Sicherheitsaspekte, um Verletzungen zu vermeiden.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Melde dich für unseren Newsletter an, um über lokale Angebote und Aktionen informiert zu werden.\"\n    },\n    {\n      \"reason\": \"Nutze unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informiere dich über unsere aktuellen Marktaktionen in deiner Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"744845402502\",\n      \"reason\": \"Premiumfutter für ausgewachsene Kaninchen, ideal für Simba.\"\n    },\n    {\n      \"sku\": \"4024344071740\",\n      \"reason\": \"Essbarer Spiel- und Rückzugsort für Kaninchen, fördert Beschäftigung und Wohlbefinden.\"\n    },\n    {\n      \"sku\": \"4008239252348\",\n      \"reason\": \"Knabbersticks für Kaninchen, ideal für die Beschäftigung und als Snack.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 19.0,
+    "run_id": "run_zKFSgtAeYRjvARHErZBYYIm8",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4182,
+      "completion_tokens": 469,
+      "total_tokens": 4651
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: MRPFEMMQ\nKunde: Mia Weber (CUST-2025-7776)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: PICKED_UP\nAchtung: Nein\nProdukte:\n- SKU: 8001154124692, Menge: 3\n- SKU: 4040056010195, Menge: 5"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-7776\",\n  \"customerName\": \"Mia Weber\",\n  \"petRecommendations\": {\n    \"Luna_Kaninchen\": [\n      {\n        \"reason\": \"Achten Sie darauf, dass Luna (Kaninchen) gut sozialisiert ist, besonders im Alter von 4 Jahren.\"\n      }\n    ],\n    \"Simba_Kaninchen\": [\n      {\n        \"reason\": \"Simba, mit 12 Jahren, benötigt regelmäßige Gesundheitschecks, da ältere Kaninchen anfälliger für Krankheiten sind.\"\n      }\n    ],\n    \"Tweety_Löwenkopf\": [\n      {\n        \"reason\": \"Für Tweety, den Löwenkopf (10 Jahre), sollte eine spezielle Diät in Betracht gezogen werden, die den Bedarf an Ballaststoffen deckt.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe, um von Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"744845402502\",\n      \"reason\": \"Premiumfutter für ausgewachsene Kaninchen, ideal für Luna, Simba und Tweety.\"\n    },\n    {\n      \"sku\": \"4017721839599\",\n      \"reason\": \"Essbarer Spiel- und Rückzugsort für Kaninchen, fördert die Beschäftigung und das Wohlbefinden.\"\n    },\n    {\n      \"sku\": \"4040056010195\",\n      \"reason\": \"Kräuter zur Unterstützung der Verdauung, nützlich für alle Kaninchen in der Gruppe.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

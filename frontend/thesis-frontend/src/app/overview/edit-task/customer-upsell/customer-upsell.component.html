@@ -1,58 +1,83 @@
-<div class="upsell-content">
-  <h2 class="customer-name">
-    {{ customerName }} ({{ customerAge }})
-    <mat-icon *ngIf="customerGender === 'male'">male</mat-icon>
-    <mat-icon *ngIf="customerGender === 'female'">female</mat-icon>
-  </h2>
-
-  <div class="pet-info">
-    <div *ngIf="!showAllPets">
-      <div class="info-row">
-        <span class="fact-text">
-          ({{ pets[0].type }}) {{ pets[0].breed }} {{ pets[0].name }} ({{ pets[0].age }})
-        </span>
-        <mat-icon *ngIf="pets[0].gender === 'male'">male</mat-icon>
-        <mat-icon *ngIf="pets[0].gender === 'female'">female</mat-icon>
+<ng-container *ngIf="!isLoading && customer">
+  <mat-card class="customer-card">
+    <mat-card-header>
+      <mat-card-title>Kunde</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div><span class="customer-label">Name:</span> {{ customer.name }}</div>
+      <div><span class="customer-label">Email:</span> {{ customer.email }}</div>
+      <div *ngIf="customer.phone"><span class="customer-label">Telefon:</span> {{ customer.phone }}</div>
+      <div *ngIf="customer.address"><span class="customer-label">Adresse:</span> {{ customer.address }}</div>
+      <div *ngIf="customer.customerNumber"><span class="customer-label">Kundennummer:</span> {{ customer.customerNumber }}</div>
+      <div class="customer-reason">{{ customerComment }}</div>
+      <div *ngIf="customer.pets?.length">
+        <mat-divider></mat-divider>
+        <mat-card-title>Haustiere</mat-card-title>
+        <div class="pet-list">
+          <div class="pet-list-item" *ngFor="let pet of customer.pets">
+            <span class="pet-icon">{{ getPetIcon(pet.species) }}</span>
+            <span class="pet-name">{{ pet.name }}</span> ({{ pet.species }}
+            <span *ngIf="pet.breed">, {{ pet.breed }}</span>
+            <span *ngIf="pet.age">, {{ pet.age }} Jahre</span>
+            <span *ngIf="pet.isNeutered !== undefined">, {{ pet.isNeutered ? 'kastriert' : 'nicht kastriert' }}</span>
+            <span *ngIf="pet.birthDate">, geb. {{ pet.birthDate }}</span>
+            )
+            <div class="pet-reason" *ngIf="petComments[pet.name]">
+              {{ petComments[pet.name] }}
+            </div>
+          </div>
+        </div>
       </div>
+    </mat-card-content>
+  </mat-card>
+</ng-container>
+
+<mat-card class="recommend-card" *ngIf="!isLoading">
+  <mat-card-header>
+    <mat-card-title>Empfohlene Produkte</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="loadingProducts" style="text-align:center; padding: 1em;">
+      <mat-spinner diameter="32"></mat-spinner>
+      <div>Produkte werden geladen ...</div>
     </div>
-
-    <div *ngIf="showAllPets">
-      <div class="info-row" *ngFor="let pet of pets">
-        <span class="fact-text">
-          ({{ pet.type }}) {{ pet.breed }} {{ pet.name }} ({{ pet.age }})
-        </span>
-        <mat-icon *ngIf="pet.gender === 'male'">male</mat-icon>
-        <mat-icon *ngIf="pet.gender === 'female'">female</mat-icon>
-      </div>
-    </div>
-
-    <!-- Button unter der Liste -->
-    <button mat-button class="inline-toggle-button" (click)="toggleShowAllPets()">
-      {{ showAllPets ? 'Weniger anzeigen' : '+' + (pets.length - 1) + ' weitere anzeigen' }}
-    </button>
-  </div>
-
-  <mat-divider></mat-divider>
-
-  <h3>
-    <mat-icon>shopping_cart</mat-icon> Empfohlene Produkte
-  </h3>
-  <ul>
-    <li *ngFor="let product of products | slice:0:2" class="product-item">
+    <ng-container *ngIf="!loadingProducts && products.length">
       <app-product-card
-        [name]="product.name"
-        [price]="product.price"
-        [imageUrl]="product.imageUrl">
-      </app-product-card>
-      <div class="product-hints" *ngIf="product.hints?.length">
-        <mat-chip-listbox class="mat-mdc-chip-set">
-          <mat-chip *ngFor="let hint of product.hints | slice:0:3">
-            <p class="ki-text">{{ hint }}</p>
-          </mat-chip>
-        </mat-chip-listbox>
+        [name]="currentProduct.name"
+        [description]="currentProduct.description"
+        [price]="currentProduct.price"
+        [sku]="currentProduct.sku"
+        [category]="currentProduct.category"
+        [brand]="currentProduct.brand"
+        [stockQuantity]="currentProduct.stockQuantity"
+        [shelfLocation]="currentProduct.shelfLocation"
+        [isColdStorage]="currentProduct.isColdStorage"
+        [targetAnimal]="currentProduct.targetAnimal"
+        [recommendedAgeGroup]="currentProduct.recommendedAgeGroup"
+        [weightGrams]="currentProduct.weightGrams"
+        [packSize]="currentProduct.packSize"
+        [imageUrl]="currentProduct.imageUrl"
+        [tags]="currentProduct.tags"
+        [reason]="currentProduct.reason"
+      ></app-product-card>
+      <div class="product-navigation-buttons">
+        <button mat-raised-button color="primary" (click)="showPrevProduct()">
+          <mat-icon>chevron_left</mat-icon>
+          Zurück
+        </button>
+        <span class="product-index-info">{{ currentProductIndex + 1 }} / {{ products.length }}</span>
+        <button mat-raised-button color="primary" (click)="showNextProduct()">
+          Weiter
+          <mat-icon>chevron_right</mat-icon>
+        </button>
       </div>
-    </li>
-  </ul>
+    </ng-container>
+    <div *ngIf="!loadingProducts && !products.length" style="text-align:center; color:#888; padding:1em;">
+      Keine passenden Produkte gefunden.
+    </div>
+  </mat-card-content>
+</mat-card>
 
+<div style="text-align: right; margin-top: 16px;">
   <button mat-raised-button color="primary" (click)="close()">Schließen</button>
 </div>

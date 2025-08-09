@@ -1,0 +1,116 @@
+[
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 17.0,
+    "run_id": "run_gTqYBe8kztAeaXUmshwsvq1V",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4274,
+      "completion_tokens": 453,
+      "total_tokens": 4727
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 7OGVABH3\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-08\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4001967012711, Menge: 2\n- SKU: 4011905331438, Menge: 2\n- SKU: 4008239218160, Menge: 3\n- SKU: 3182550715651, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Nala_Kaninchen\": [\n      {\n        \"reason\": \"Für Ihr 4-jähriges Widderkaninchen Nala sollten Sie auf eine abwechslungsreiche Ernährung achten, um seine Gesundheit zu fördern.\"\n      }\n    ],\n    \"Luna_Papagei\": [\n      {\n        \"reason\": \"Da Ihr 8-jähriger Papagei Luna kastriert ist, beziehen Sie regelmäßige tierärztliche Kontrollen und eine ausgewogene Ernährung mit ein.\"\n      }\n    ],\n    \"Luna_Katze\": [\n      {\n        \"reason\": \"Für Ihre 13-jährige Siamkatze Luna empfehlen sich spezielle Seniorenkost und regelmäßige Gesundheitschecks beim Tierarzt.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um Treuepunkte zu sammeln und Rabatte zu erhalten.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe, um von speziellen Aktionen zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4001967012711\",\n      \"reason\": \"Welpenfutter für junge Hunde, ideal für die Ernährung von Welpen.\"\n    },\n    {\n      \"sku\": \"4011905331438\",\n      \"reason\": \"Spielzeug für Welpen, fördert das Spielen und die Zahnpflege.\"\n    },\n    {\n      \"sku\": \"3182550715651\",\n      \"reason\": \"Diätfutter für Hunde mit Magen-Darm-Störungen, wichtig für die Gesundheit.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "status": "completed",
+    "duration_seconds": 16.0,
+    "run_id": "run_RzIFG810r0SMOxC1Sj6Y4XSW",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4240,
+      "completion_tokens": 426,
+      "total_tokens": 4666
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 7OGVABH3\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-08\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4001967012711, Menge: 2\n- SKU: 4011905331438, Menge: 2\n- SKU: 4008239218160, Menge: 3\n- SKU: 3182550715651, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Löwenkopf_Kaninchen\": [\n      {\n        \"reason\": \"Achte darauf, dass dein Löwenkopf-Kaninchen genügend Platz zum Herumrennen hat und ausreichend Heu zur Verfügung steht.\"\n      }\n    ],\n    \"Papagei\": [\n      {\n        \"reason\": \"Für deinen Papagei ist abwechslungsreiche Ernährung wichtig; biete ihm frisches Obst und Gemüse an.\"\n      }\n    ],\n    \"Siamkatze\": [\n      {\n        \"reason\": \"Berücksichtige, dass Siamkatzen gerne spielen; Spielzeug und interaktive Spiele fördern ihre Aktivität.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Melde dich für unseren Newsletter an, um über lokale Angebote informiert zu werden.\"\n    },\n    {\n      \"reason\": \"Nutze unser Bonusprogramm, um bei zukünftigen Käufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informiere dich über lokale Aktionen in deinem Markt.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4001967012711\",\n      \"reason\": \"Welpenfutter für junge Hunde – ideal für die Ernährung von Welpen.\"\n    },\n    {\n      \"sku\": \"4011905331438\",\n      \"reason\": \"Spielzeug für Welpen – fördert das Spielen und die Zahnpflege.\"\n    },\n    {\n      \"sku\": \"3182550715651\",\n      \"reason\": \"Diätfutter für Hunde mit Magen-Darm-Störungen – wichtig für die Gesundheit.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "completed",
+    "duration_seconds": 19.0,
+    "run_id": "run_alCL3u6fn5mgW6A9DhN7yGA6",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4301,
+      "completion_tokens": 472,
+      "total_tokens": 4773
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 7OGVABH3\nKunde: Max Meyer (CUST-2025-4342)\nZeitraum: 2025-06-06 bis 2025-06-08\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4001967012711, Menge: 2\n- SKU: 4011905331438, Menge: 2\n- SKU: 4008239218160, Menge: 3\n- SKU: 3182550715651, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4342\",\n  \"customerName\": \"Max Meyer\",\n  \"petRecommendations\": {\n    \"Nala_Kaninchen\": [\n      {\n        \"reason\": \"Für Ihr 4-jähriges Zwergkaninchen Nala könnte eine hohe Faseraufnahme zur Förderung der Zahngesundheit wichtig sein.\"\n      }\n    ],\n    \"Luna_Papagei\": [\n      {\n        \"reason\": \"Da Luna, Ihre 8-jährige Papagei, kastriert ist, achten Sie auf abwechslungsreiche Beschäftigung, um Depressionen zu vermeiden.\"\n      }\n    ],\n    \"Luna_Siamkatze\": [\n      {\n        \"reason\": \"Die 13-jährige Siamkatze Luna benötigt regelmäßige tierärztliche Kontrollen, um Alterskrankheiten frühzeitig zu erkennen.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei Ihren nächsten Einkäufen zu sparen.\"\n    },\n    {\n      \"reason\": \"Fragen Sie nach unseren lokalen Angeboten in Ihrer Nähe.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"5410340512464\",\n      \"reason\": \"Papageienfutter für deinen Papagei, sorgt für eine ausgewogene Ernährung.\"\n    },\n    {\n      \"sku\": \"4011905047583\",\n      \"reason\": \"Essbarer Tunnel für dein Zwergkaninchen, ideal zum Spielen und Verstecken.\"\n    },\n    {\n      \"sku\": \"4008239218160\",\n      \"reason\": \"Gourmet-Nassfutter für deine Siamkatze, schmackhaft und hochwertig.\"\n    }\n  ]\n}"
+      }
+    ]
+  }
+]

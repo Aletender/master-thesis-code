@@ -5,6 +5,7 @@ export interface TaskProduct {
 
 export interface Task {
   taskId: string;
+  customerId: string; // <-- hinzugefügt
   customerName: string;
   startDate: string;
   endDate: string;

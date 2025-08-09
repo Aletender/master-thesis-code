@@ -1,0 +1,108 @@
+[
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 15.0,
+    "run_id": "run_uoVhQacSrMICD0PMuOlnYAKc",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4288,
+      "completion_tokens": 476,
+      "total_tokens": 4764
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: 03263AMP\nKunde: Paul Schmidt (CUST-2025-4273)\nZeitraum: 2025-06-06 bis 2025-06-08\nStatus: IN_PACKING\nAchtung: Nein\nProdukte:\n- SKU: 4260165160253, Menge: 2\n- SKU: 4011905331438, Menge: 2\n- SKU: 5902414201242, Menge: 4\n- SKU: 4011905408001, Menge: 1"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-4273\",\n  \"customerName\": \"Paul Schmidt\",\n  \"petRecommendations\": {\n    \"Bella_Katze\": [\n      {\n        \"reason\": \"Achten Sie auf die Pflege des Maine Coon Fells, besonders bei Bella, da diese Rasse viel haaren kann.\"\n      }\n    ],\n    \"Miezi_Kaninchen\": [\n      {\n        \"reason\": \"Für den 7-jährigen Widder Miezi, der kastriert ist, ist es wichtig, regelmäßige Tierarztbesuche zur Gesundheitsvorsorge einzuplanen.\"\n      }\n    ],\n    \"Nala_Wellensittich\": [\n      {\n        \"reason\": \"Sorgen Sie dafür, dass Nala, der Wellensittich, täglich frisches Obst und Gemüse erhält, um eine ausgewogene Ernährung zu gewährleisten.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für exklusive Angebote und lokale Aktionen.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Informieren Sie sich über lokale Angebote in Ihrer Nähe, um von Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"5902414201242\",\n      \"reason\": \"Ergänzungsfutter zur Unterstützung der Gelenkfunktion bei älteren Hunden. Ideal für deinen Seniorhund.\"\n    },\n    {\n      \"sku\": \"4011905331438\",\n      \"reason\": \"Robustes Quietschspielzeug aus Latex, ideal für aktive Hunde. Perfekt für Spiel und Beschäftigung.\"\n    },\n    {\n      \"sku\": \"4011905408001\",\n      \"reason\": \"Kompostierbare Katzenstreu auf Pflanzenbasis. Umweltfreundlich und ideal für deine Katze.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 2,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_ZdEqGhRs35CefeGRmX4A9PFt",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2651,
+      "completion_tokens": 64,
+      "total_tokens": 2715
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 8 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 3,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_oEKgjmde4xyR6FhpCoLtm4Ff",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2676,
+      "completion_tokens": 64,
+      "total_tokens": 2740
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 5 seconds."
+      }
+    }
+  }
+]

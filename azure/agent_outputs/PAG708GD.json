@@ -1,0 +1,108 @@
+[
+  {
+    "run_index": 2,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_x6goc3Z8YKN7e3tF5v4aH5Fo",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1244,
+      "completion_tokens": 23,
+      "total_tokens": 1267
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 20 seconds."
+      }
+    }
+  },
+  {
+    "run_index": 1,
+    "status": "completed",
+    "duration_seconds": 16.0,
+    "run_id": "run_5mK48BfCcX6E222EQ7Q55wMx",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4278,
+      "completion_tokens": 442,
+      "total_tokens": 4720
+    },
+    "messages": [
+      {
+        "role": "user",
+        "text": "Task ID: PAG708GD\nKunde: Ben Schneider (CUST-2025-2350)\nZeitraum: 2025-06-06 bis 2025-06-11\nStatus: READY4PICKUP\nAchtung: Ja\nProdukte:\n- SKU: 4011905331438, Menge: 5\n- SKU: 4032314000152, Menge: 5\n- SKU: 5060122541384, Menge: 1\n- SKU: 4260172783112, Menge: 2"
+      },
+      {
+        "role": "assistant",
+        "text": "{\n  \"customerId\": \"CUST-2025-2350\",\n  \"customerName\": \"Ben Schneider\",\n  \"petRecommendations\": {\n    \"Pudel\": [\n      {\n        \"reason\": \"Achten Sie auf die Ernährung Ihres Pudel. Eine ausgewogene Diät ist wichtig, um Übergewicht zu vermeiden, da Pudel dazu neigen.\"\n      },\n      {\n        \"reason\": \"Regelmäßige Fellpflege ist wichtig, da Pudel ein lockiges Fell haben. Denken Sie an regelmäßige Besuche beim Hundefriseur.\"\n      },\n      {\n        \"reason\": \"Berücksichtigen Sie geistige Anregung durch Spielzeuge oder Tricks, um den aktiven Geist des Pudels zu fördern.\"\n      }\n    ]\n  },\n  \"customerRecommendations\": [\n    {\n      \"reason\": \"Abonnieren Sie unseren Newsletter für aktuelle Angebote und Tipps zur Tierpflege.\"\n    },\n    {\n      \"reason\": \"Nutzen Sie unser Bonusprogramm, um bei zukünftigen Einkäufen Punkte zu sammeln.\"\n    },\n    {\n      \"reason\": \"Fragen Sie nach lokalen Angeboten in Ihrer Nähe, um von Rabatten zu profitieren.\"\n    }\n  ],\n  \"productRecommendations\": [\n    {\n      \"sku\": \"4032314000152\",\n      \"reason\": \"Hochwertiges Lachsöl für Ben's Hund zur Unterstützung von Fell und Haut.\"\n    },\n    {\n      \"sku\": \"5060122541384\",\n      \"reason\": \"Seniorenfutter für Ben's Katze, ideal für ältere Tiere mit natürlichen Zutaten.\"\n    },\n    {\n      \"sku\": \"4011905331438\",\n      \"reason\": \"Spielzeug für Ben's Hund, fördert die Beschäftigung und macht Spaß.\"\n    }\n  ]\n}"
+      }
+    ]
+  },
+  {
+    "run_index": 3,
+    "status": "failed",
+    "duration_seconds": null,
+    "run_id": "run_x0Qvb0QO9DhLWGCMwnz76eTX",
+    "model": "gpt-4o-mini",
+    "temperature": 0.01,
+    "top_p": 1.0,
+    "tools": [
+      {
+        "name": "handbook_agent",
+        "id": "asst_x2t0TtlGsiqBgnyAkkPFwImK"
+      },
+      {
+        "name": "productagent",
+        "id": "asst_FGsjK2d3HCDgHidee9aLo75e"
+      },
+      {
+        "name": "user_agent",
+        "id": "asst_eVa2VTNqEyy9x11YsJiUCSUO"
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2653,
+      "completion_tokens": 82,
+      "total_tokens": 2735
+    },
+    "error": {
+      "_data": {
+        "code": "tool_server_error",
+        "message": "Error: rate_limit_exceeded; Rate limit is exceeded. Try again in 2 seconds."
+      }
+    }
+  }
+]
